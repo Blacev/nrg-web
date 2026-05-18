@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "servicios": "Servicios",
+    "equipo": "Equipo",
+    "sectores": "Sectores",
+    "contacto": "Contacto",
+    "cotizar": "Cotizar"
+  },
+  "footer": {
+    "tagline": "Ingeniería en movimiento. Experiencia en cada giro.",
+    "servicios": "Servicios",
+    "empresa": "Empresa",
+    "contacto": "Contacto",
+    "legal": "Legal",
+    "derechos": "© 2025 NRG Ingeniería S.A.S. Todos los derechos reservados.",
+    "privacidad": "Política de privacidad",
+    "terminos": "Términos de uso"
+  },
+  "common": {
+    "verMas": "Ver más",
+    "contactar": "Contactar",
+    "solicitarCotizacion": "Solicitar cotización",
+    "conoceEquipo": "Conoce al equipo",
+    "verServicios": "Ver todos los servicios",
+    "agendarLlamada": "Agendar una llamada técnica",
+    "hablarWhatsapp": "Hablar por WhatsApp"
+  }
+}

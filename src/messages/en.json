@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "servicios": "Services",
+    "equipo": "Team",
+    "sectores": "Sectors",
+    "contacto": "Contact",
+    "cotizar": "Get a quote"
+  },
+  "footer": {
+    "tagline": "Engineering in motion. Experience in every turn.",
+    "servicios": "Services",
+    "empresa": "Company",
+    "contacto": "Contact",
+    "legal": "Legal",
+    "derechos": "© 2025 NRG Ingeniería S.A.S. All rights reserved.",
+    "privacidad": "Privacy policy",
+    "terminos": "Terms of use"
+  },
+  "common": {
+    "verMas": "Learn more",
+    "contactar": "Contact us",
+    "solicitarCotizacion": "Request a quote",
+    "conoceEquipo": "Meet the team",
+    "verServicios": "View all services",
+    "agendarLlamada": "Schedule a technical call",
+    "hablarWhatsapp": "Chat on WhatsApp"
+  }
+}

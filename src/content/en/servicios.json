@@ -1,0 +1,251 @@
+{
+  "page": {
+    "eyebrow": "Services",
+    "title": "Comprehensive services for power plants",
+    "subtitle": "We support your plant throughout the entire turbine lifecycle: from initial assembly to major maintenance, modernization and ongoing technical support.",
+    "ctaTitle": "Don't see the service you need?",
+    "ctaSubtitle": "Our team evaluates special requirements on a case-by-case basis. Tell us what you need.",
+    "ctaLabel": "Contact the technical team",
+    "ctaHref": "/contacto",
+    "detailCtaPrimary": "Request a quote",
+    "detailCtaSecondary": "View other services",
+    "detailCtaViewAll": "View all services",
+    "otherServicesEyebrow": "Explore more",
+    "otherServicesTitle": "Other services",
+    "otherServicesViewLabel": "View service",
+    "breadcrumbHome": "Home",
+    "breadcrumbServices": "Services"
+  },
+  "services": [
+    {
+      "slug": "mantenimiento",
+      "icon": "Wrench",
+      "title": "Turbine maintenance",
+      "shortDescription": "Preventive, corrective and predictive programs for hydraulic, steam and gas turbines. Inspections, major and minor overhauls.",
+      "heroTitle": "Turbine maintenance",
+      "heroSubtitle": "Preventive, corrective and predictive maintenance programs designed to maximize availability and extend the useful life of your equipment.",
+      "includes": {
+        "title": "What this service includes",
+        "items": [
+          "Scheduled inspections (borescope, vibration, alignment, balancing)",
+          "Preventive maintenance based on operating hours or calendar",
+          "Emergency corrective maintenance",
+          "Major and minor overhaul",
+          "Failure diagnosis and root cause analysis",
+          "Technical reports with recommendations"
+        ]
+      },
+      "applications": {
+        "title": "Applications",
+        "items": [
+          "Hydraulic turbines (Pelton, Francis, Kaplan)",
+          "Steam turbines (impulse, reaction, condensing, backpressure)",
+          "Gas turbines (simple and combined cycle)"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for your plant",
+        "items": [
+          "Reduction of unplanned shutdowns",
+          "Extended equipment service life",
+          "Optimized operational availability",
+          "Data-driven technical decisions"
+        ]
+      },
+      "closing": "Reduce unplanned shutdowns. Let's talk about a maintenance plan for your plant.",
+      "image": "/images/servicios/mantenimiento.jpg"
+    },
+    {
+      "slug": "montaje",
+      "icon": "Settings",
+      "title": "Turbine assembly",
+      "shortDescription": "Complete mechanical installation of turbines and auxiliary equipment, from on-site reception to final coupling.",
+      "heroTitle": "Turbine and auxiliary equipment assembly",
+      "heroSubtitle": "Complete mechanical installation from on-site equipment reception to handover ready for commissioning.",
+      "includes": {
+        "title": "What this service includes",
+        "items": [
+          "On-site reception and verification",
+          "Pre-assembly and assembly of rotor, stator and casing",
+          "Coupling to generator and alignment",
+          "Assembly of auxiliary systems (lubrication oil, cooling, control)",
+          "Mechanical tests prior to commissioning",
+          "Construction documentation and technical dossier"
+        ]
+      },
+      "applications": {
+        "title": "Applications",
+        "items": [
+          "New and repowered hydroelectric plants",
+          "Steam thermoelectric plants",
+          "Simple and combined cycle gas plants",
+          "Auxiliary equipment and balance of plant systems"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for your plant",
+        "items": [
+          "Installation according to manufacturer standards",
+          "Complete and traceable documentation",
+          "Reduced commissioning errors",
+          "Equipment delivered ready for commissioning"
+        ]
+      },
+      "closing": "Ensure installation that meets manufacturer standards. Inquire about your next project.",
+      "image": "/images/servicios/montaje.jpg"
+    },
+    {
+      "slug": "puesta-en-marcha",
+      "icon": "Play",
+      "title": "Commissioning",
+      "shortDescription": "Commissioning, acceptance tests, synchronization and operational handover to the client.",
+      "heroTitle": "Start-up and commissioning",
+      "heroSubtitle": "We transform an installed unit into an operational, reliable power generation unit, formally handed over to the client.",
+      "includes": {
+        "title": "What this service includes",
+        "items": [
+          "Cold and hot tests",
+          "Grid synchronization",
+          "Performance acceptance tests",
+          "Operating curves and commissioning records",
+          "Client operations staff training",
+          "Formal handover with complete dossier"
+        ]
+      },
+      "applications": {
+        "title": "Applications",
+        "items": [
+          "New plants at initial start-up",
+          "Modernized plants after overhaul",
+          "Repowering of existing units",
+          "Post-major-maintenance validation"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for your plant",
+        "items": [
+          "Formal operational handover with documentation",
+          "Trained client personnel",
+          "Independent performance verification",
+          "Reduced risks at commercial start-up"
+        ]
+      },
+      "closing": "Move from construction to operation with technical confidence and documentation support.",
+      "image": "/images/servicios/puesta-en-marcha.jpg"
+    },
+    {
+      "slug": "alineacion",
+      "icon": "Crosshair",
+      "title": "Precision alignment",
+      "shortDescription": "Precision laser alignment between turbine and generator. Reduction of vibrations and premature wear.",
+      "heroTitle": "Precision alignment",
+      "heroSubtitle": "Laser alignment between turbine, gearbox and generator to eliminate vibrations, reduce wear and protect your investment.",
+      "includes": {
+        "title": "What this service includes",
+        "items": [
+          "High-precision laser alignment",
+          "Correction of angular and parallel misalignments",
+          "Soft foot and base flatness verification",
+          "Reports with before/after values",
+          "Recommendations for future checks"
+        ]
+      },
+      "applications": {
+        "title": "Applications",
+        "items": [
+          "Turbine-generator couplings",
+          "Turbine-gearbox-generator couplings",
+          "Coupled pumps and compressors",
+          "Critical rotating equipment in general"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for your plant",
+        "items": [
+          "Significant reduction in vibrations",
+          "Extended bearing and seal service life",
+          "Lower energy consumption from friction",
+          "Traceable technical documentation"
+        ]
+      },
+      "closing": "Good alignment can save years of service life. Request a one-time or scheduled service.",
+      "image": "/images/servicios/alineacion.jpg"
+    },
+    {
+      "slug": "asesoria",
+      "icon": "Lightbulb",
+      "title": "Technical consulting",
+      "shortDescription": "Specialized consulting on operations, recurring failures, maintenance plans and modernization.",
+      "heroTitle": "Specialized technical consulting",
+      "heroSubtitle": "Independent consulting to support the most important technical decisions at your plant.",
+      "includes": {
+        "title": "What this service includes",
+        "items": [
+          "Diagnosis of recurring operational problems",
+          "Maintenance plan design",
+          "Modernization and repowering studies",
+          "Second technical opinion on third-party proposals",
+          "Support in technical negotiations with manufacturers"
+        ]
+      },
+      "applications": {
+        "title": "Applications",
+        "items": [
+          "Plants with recurring failures without identified cause",
+          "Modernization investment decisions",
+          "Optimization of existing maintenance plans",
+          "Technical validation of commercial proposals"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for your plant",
+        "items": [
+          "Independent and objective technical decisions",
+          "Savings on unnecessary interventions",
+          "Greater negotiating power with suppliers",
+          "Knowledge transfer to your team"
+        ]
+      },
+      "closing": "Better-informed technical decisions. Let's talk.",
+      "image": "/images/servicios/asesoria.jpg"
+    },
+    {
+      "slug": "suministros",
+      "icon": "Package",
+      "title": "Supplies and spare parts",
+      "shortDescription": "Original and alternative spare parts, specialized tools and logistical support for interventions.",
+      "heroTitle": "Supplies and spare parts",
+      "heroSubtitle": "Management of original and alternative spare parts, plus specialized tools for turbine interventions.",
+      "includes": {
+        "title": "What this service includes",
+        "items": [
+          "Original manufacturer spare parts",
+          "Certified alternative spare parts",
+          "Specialized tools (hydraulic jacks, aligners, instrumentation)",
+          "International logistics support",
+          "Obsolescence and replacement advisory"
+        ]
+      },
+      "applications": {
+        "title": "Applications",
+        "items": [
+          "Scheduled and emergency maintenance",
+          "Plants with obsolete or discontinued equipment",
+          "Modernization projects",
+          "Strategic stock of critical spare parts"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for your plant",
+        "items": [
+          "Reduced downtime",
+          "Certified alternatives at competitive costs",
+          "Traceability of critical spare parts",
+          "Technical support in parts selection"
+        ]
+      },
+      "closing": "Reduce downtime with the right supply chain.",
+      "image": "/images/servicios/suministros.jpg"
+    }
+  ]
+}

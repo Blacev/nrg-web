@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "breadcrumbHome": "Home"
+  },
+  "hero": {
+    "eyebrow": "Sectors",
+    "title": "Three technologies. The same technical demand.",
+    "subtitle": "We work with the three main turbine-based generation technologies. That breadth gives your company a single provider for multiple needs."
+  },
+  "intro": {
+    "title": "One provider, multiple technologies",
+    "paragraphs": [
+      "Most turbine service companies specialize in a single technology — hydraulic, steam, or gas. That forces plants with mixed generation to hire and coordinate multiple providers, multiplying contacts, contracts, and risks.",
+      "NRG covers all three technologies with the same technical team. For you, that means fewer providers, better coordination, and consistent quality across all interventions."
+    ]
+  },
+  "sectors": [
+    {
+      "id": "hidro",
+      "tag": "HYDROELECTRIC",
+      "icon": "Droplets",
+      "title": "Hydroelectric power plants",
+      "shortDescription": "Pelton, Francis, and Kaplan turbines. From small-scale run-of-river plants to large-capacity facilities.",
+      "fullDescription": "We intervene on hydraulic turbines in low, medium, and high head plants. Our team has worked on both small hydroelectric plants (SHP) and large-capacity facilities, on public and private projects, in tropical, Andean, and European environments.",
+      "turbineTypes": [
+        { "name": "Pelton", "description": "High head, low flow. Bucket-wheel design with nozzle injectors." },
+        { "name": "Francis", "description": "Medium head, medium flow. The most common type worldwide." },
+        { "name": "Kaplan", "description": "Low head, high flow. Adjustable propeller-type runner blades." },
+        { "name": "Bulb", "description": "Very low head applications. Generator integrated in a submerged bulb." }
+      ],
+      "applications": [
+        "Run-of-river and reservoir plants",
+        "Small hydropower (SHP) facilities",
+        "Pumped-storage plants",
+        "Repowering of existing plants"
+      ],
+      "image": null,
+      "accentColor": "amber"
+    },
+    {
+      "id": "vapor",
+      "tag": "STEAM",
+      "icon": "Cloud",
+      "title": "Steam thermal power plants",
+      "shortDescription": "Steam turbines in biomass, cogeneration, sugar mill, and thermoelectric plants.",
+      "fullDescription": "Services for steam turbines across a wide range of industrial applications: cogeneration, biomass, sugar mills, refineries, pulp and paper mills, and large-scale thermoelectric plants. We handle impulse and reaction turbines, condensing and back-pressure configurations.",
+      "turbineTypes": [
+        { "name": "Impulse", "description": "Full steam expansion occurs in the fixed nozzles." },
+        { "name": "Reaction", "description": "Steam expansion distributed across fixed and moving blades." },
+        { "name": "Condensing", "description": "Exhaust steam is condensed for maximum energy extraction." },
+        { "name": "Back-pressure", "description": "Exhaust steam feeds industrial processes (cogeneration)." }
+      ],
+      "applications": [
+        "Thermoelectric power plants",
+        "Industrial cogeneration",
+        "Sugar mills and biomass plants",
+        "Refineries and chemical plants",
+        "Pulp and paper mills"
+      ],
+      "image": null,
+      "accentColor": "teal"
+    },
+    {
+      "id": "gas",
+      "tag": "GAS",
+      "icon": "Flame",
+      "title": "Gas thermal power plants",
+      "shortDescription": "Gas turbines in simple and combined cycle, peaking plants, and distributed generation.",
+      "fullDescription": "We service industrial and aeroderivative gas turbines in simple and combined cycle applications. This includes peaking plants, industrial cogeneration, and distributed generation. We work in close coordination with OEMs and oil & gas facilities.",
+      "turbineTypes": [
+        { "name": "Industrial", "description": "Heavy-duty, robust design for continuous operation." },
+        { "name": "Aeroderivative", "description": "Aircraft engine derived. High efficiency and fast start capability." },
+        { "name": "Simple cycle", "description": "Gas turbine only. Ideal for peaking and backup generation." },
+        { "name": "Combined cycle", "description": "Gas turbine + steam turbine. Maximum thermal efficiency." }
+      ],
+      "applications": [
+        "Peaking and backup power plants",
+        "Industrial cogeneration",
+        "Combined cycle plants",
+        "Distributed generation",
+        "Oil & gas and refinery facilities"
+      ],
+      "image": null,
+      "accentColor": "amber"
+    }
+  ],
+  "crossover": {
+    "eyebrow": "Multi-technology advantage",
+    "title": "What plants with mixed generation gain",
+    "items": [
+      {
+        "icon": "Users",
+        "title": "A single technical point of contact",
+        "description": "Reduces the administrative friction of coordinating separately specialized providers."
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Consistency across interventions",
+        "description": "The same protocols, quality standards, and reporting formats for all your units, regardless of technology."
+      },
+      {
+        "icon": "Wallet",
+        "title": "Contracting economies of scale",
+        "description": "Multi-technology framework agreements that reduce transaction costs and ensure availability."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Do you operate a plant with mixed technology?",
+    "subtitle": "Tell us which units you run. We will propose a comprehensive service scheme with a single technical team.",
+    "ctaPrimary": { "label": "Request an integrated proposal", "href": "/contacto" },
+    "ctaSecondary": { "label": "View our services", "href": "/servicios" }
+  },
+  "labels": {
+    "turbineTypesLabel": "Turbine types",
+    "applicationsLabel": "Applications"
+  }
+}

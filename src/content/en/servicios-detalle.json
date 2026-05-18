@@ -1,0 +1,88 @@
+{
+  "mantenimiento": {
+    "slug": "mantenimiento",
+    "titulo": "Turbine maintenance",
+    "subtitulo": "Preventive, corrective and predictive maintenance programs to maximize availability and extend the service life of your equipment.",
+    "queIncluye": [
+      "Scheduled inspections (boroscopy, vibration, alignment, balancing)",
+      "Preventive maintenance based on operating hours or calendar",
+      "Emergency corrective maintenance",
+      "Major and minor overhaul",
+      "Fault diagnosis and root cause analysis",
+      "Technical reports with recommendations"
+    ],
+    "aplicaciones": [
+      "Hydraulic turbines (Pelton, Francis, Kaplan)",
+      "Steam turbines (impulse, reaction, condensing, back-pressure)",
+      "Gas turbines (simple and combined cycle)"
+    ],
+    "cierreTexto": "Reduce unplanned downtime. Let's talk about a maintenance plan for your plant."
+  },
+  "montaje": {
+    "slug": "montaje",
+    "titulo": "Turbine and auxiliary equipment assembly",
+    "subtitulo": "Complete mechanical installation from equipment reception on site to commissioning-ready handover.",
+    "queIncluye": [
+      "Reception and on-site verification",
+      "Pre-assembly and assembly of rotor, stator and casing",
+      "Coupling to generator and alignment",
+      "Auxiliary systems installation (lubrication oil, cooling, control)",
+      "Pre-commissioning mechanical tests",
+      "Construction documentation and technical dossier"
+    ],
+    "cierreTexto": "Ensure a manufacturer-standard compliant assembly. Contact us for your next project."
+  },
+  "puesta-en-marcha": {
+    "slug": "puesta-en-marcha",
+    "titulo": "Commissioning and startup",
+    "subtitulo": "We turn an installed unit into an operational, reliable generation asset with formal handover to the client.",
+    "queIncluye": [
+      "Cold and hot tests",
+      "Grid synchronization",
+      "Performance acceptance tests",
+      "Operating curves and commissioning records",
+      "Client operations staff training",
+      "Formal handover with complete dossier"
+    ],
+    "cierreTexto": "Move from construction to operation with technical confidence and full documentation."
+  },
+  "alineacion": {
+    "slug": "alineacion",
+    "titulo": "Precision alignment",
+    "subtitulo": "Laser alignment between turbine, gearbox and generator to eliminate vibration, reduce wear and protect your investment.",
+    "queIncluye": [
+      "High-precision laser alignment",
+      "Angular and parallel misalignment correction",
+      "Soft foot and base flatness verification",
+      "Before/after measurement reports",
+      "Recommendations for future checks"
+    ],
+    "cierreTexto": "Good alignment can add years to equipment life. Request a one-time or scheduled service."
+  },
+  "asesoria": {
+    "slug": "asesoria",
+    "titulo": "Specialized technical consulting",
+    "subtitulo": "Independent consulting to support the most critical technical decisions for your plant.",
+    "queIncluye": [
+      "Diagnosis of recurring operational problems",
+      "Maintenance plan design",
+      "Modernization and repowering studies",
+      "Second technical opinion on third-party proposals",
+      "Support in technical negotiations with manufacturers"
+    ],
+    "cierreTexto": "Better-informed technical decisions. Let's talk."
+  },
+  "suministros": {
+    "slug": "suministros",
+    "titulo": "Supplies and spare parts",
+    "subtitulo": "Management of original and alternative spare parts, plus specialized tools for turbine interventions.",
+    "queIncluye": [
+      "OEM spare parts",
+      "Certified alternative spare parts",
+      "Specialized tools (hydraulic jacks, aligners, instrumentation)",
+      "International logistical support",
+      "Obsolescence and replacement advisory"
+    ],
+    "cierreTexto": "Reduce downtime with the right supply chain."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "nav": { "breadcrumbHome": "Inicio" },
+  "hero": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de su próximo proyecto.",
+    "subtitle": "Cuéntenos qué necesita su planta. Le respondemos en menos de 24 horas hábiles con una propuesta técnica clara."
+  },
+  "form": {
+    "title": "Solicitar propuesta o consulta técnica",
+    "subtitle": "Complete el formulario. Los campos marcados con asterisco son obligatorios.",
+    "fields": {
+      "fullName":    { "label": "Nombre completo",            "placeholder": "Su nombre",                    "required": true  },
+      "company":     { "label": "Empresa",                    "placeholder": "Nombre de su empresa",         "required": true  },
+      "position":    { "label": "Cargo",                      "placeholder": "Su cargo o rol",               "required": false },
+      "email":       { "label": "Email corporativo",          "placeholder": "nombre@empresa.com",           "required": true  },
+      "phone":       { "label": "Teléfono / WhatsApp",        "placeholder": "+57 300 000 0000",             "required": false },
+      "country":     { "label": "País",                       "placeholder": "Seleccione su país",           "required": true  },
+      "serviceType": {
+        "label": "Tipo de servicio requerido",
+        "placeholder": "Seleccione el servicio",
+        "required": true,
+        "options": [
+          { "value": "mantenimiento",    "label": "Mantenimiento" },
+          { "value": "montaje",          "label": "Montaje" },
+          { "value": "puesta-en-marcha", "label": "Puesta en marcha" },
+          { "value": "alineacion",       "label": "Alineación" },
+          { "value": "asesoria",         "label": "Asesoría técnica" },
+          { "value": "suministros",      "label": "Suministros" },
+          { "value": "integral",         "label": "Propuesta integral (varios servicios)" },
+          { "value": "otro",             "label": "Otro / No estoy seguro" }
+        ]
+      },
+      "plantType": {
+        "label": "Tipo de central",
+        "placeholder": "Seleccione el tipo",
+        "required": true,
+        "options": [
+          { "value": "hidro",  "label": "Hidroeléctrica" },
+          { "value": "vapor",  "label": "Térmica de vapor" },
+          { "value": "gas",    "label": "Térmica de gas" },
+          { "value": "mixta",  "label": "Mixta" },
+          { "value": "otra",   "label": "Otra" }
+        ]
+      },
+      "message": {
+        "label": "Descripción del proyecto o necesidad",
+        "placeholder": "Cuéntenos detalles sobre el equipo, el tipo de intervención requerida, plazos, ubicación, etc. Mientras más contexto nos brinde, mejor podemos prepararle una propuesta.",
+        "required": true
+      }
+    },
+    "submitLabel":     "Enviar solicitud",
+    "submittingLabel": "Enviando…",
+    "successTitle":    "Solicitud recibida",
+    "successMessage":  "Gracias por contactarnos. Nuestro equipo técnico revisará su mensaje y le responderá en menos de 24 horas hábiles.",
+    "resetLabel":      "Enviar otra consulta",
+    "errorTitle":      "Hubo un problema al enviar",
+    "errorMessage":    "Por favor intente de nuevo o escríbanos directamente a {email}.",
+    "validation": {
+      "required":   "Este campo es obligatorio",
+      "email":      "Ingrese un email válido",
+      "minMessage": "Por favor describa brevemente su necesidad (mínimo 20 caracteres)"
+    }
+  },
+  "sidebar": {
+    "title": "Contacto directo",
+    "items": [
+      { "icon": "Mail",          "label": "Email",              "value": "contacto@nrg-ingenieria.com",          "href": "mailto:contacto@nrg-ingenieria.com" },
+      { "icon": "Phone",         "label": "Teléfono",           "value": "+57 (pendiente)",                       "href": null },
+      { "icon": "MessageCircle", "label": "WhatsApp",           "value": "Conversación directa",                 "href": "https://wa.me/" },
+      { "icon": "Clock",         "label": "Horario de atención","value": "Lun a Vie · 8:00 a 18:00 (GMT-5)",    "href": null },
+      { "icon": "MapPin",        "label": "Sede principal",     "value": "Colombia · Operación internacional",   "href": null }
+    ],
+    "emergencyTitle": "Emergencias en planta",
+    "emergencyText":  "Para paradas no programadas fuera de horario, contáctenos por WhatsApp. Nuestro equipo se moviliza internacionalmente."
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Antes de escribirnos",
+    "items": [
+      {
+        "question": "¿En cuánto tiempo responden una solicitud?",
+        "answer": "En menos de 24 horas hábiles. Las solicitudes con información técnica completa reciben propuesta más rápida."
+      },
+      {
+        "question": "¿Operan fuera de Latinoamérica?",
+        "answer": "Sí. Nuestro equipo tiene experiencia activa en Europa y África, y nos movilizamos internacionalmente. Lo más eficiente es coordinar primero la visita técnica."
+      },
+      {
+        "question": "¿Atienden emergencias en planta?",
+        "answer": "Sí. Para paradas no programadas, recomendamos contactarnos directamente por WhatsApp, donde respondemos también fuera de horario."
+      },
+      {
+        "question": "¿Trabajan con marcas específicas?",
+        "answer": "Trabajamos con múltiples OEMs y modelos. Tras una breve consulta técnica podemos confirmar si su equipo está dentro de nuestra experiencia directa."
+      },
+      {
+        "question": "¿Hacen visitas técnicas previas a la propuesta?",
+        "answer": "Para proyectos complejos, sí. Coordinamos una visita técnica para diagnóstico antes de presentar propuesta formal."
+      }
+    ]
+  }
+}

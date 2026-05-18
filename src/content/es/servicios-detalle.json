@@ -1,0 +1,88 @@
+{
+  "mantenimiento": {
+    "slug": "mantenimiento",
+    "titulo": "Mantenimiento de turbinas",
+    "subtitulo": "Programas de mantenimiento preventivo, correctivo y predictivo para maximizar disponibilidad y extender la vida útil de su equipo.",
+    "queIncluye": [
+      "Inspecciones programadas (boroscopia, vibración, alineación, balanceo)",
+      "Mantenimiento preventivo según horas de operación o calendario",
+      "Mantenimiento correctivo de emergencia",
+      "Overhaul mayor y menor",
+      "Diagnóstico de fallas y análisis de causa raíz",
+      "Reportes técnicos con recomendaciones"
+    ],
+    "aplicaciones": [
+      "Turbinas hidráulicas (Pelton, Francis, Kaplan)",
+      "Turbinas de vapor (acción, reacción, condensación, contrapresión)",
+      "Turbinas de gas (ciclo simple y combinado)"
+    ],
+    "cierreTexto": "Reduzca paradas no programadas. Hablemos de un plan de mantenimiento para su planta."
+  },
+  "montaje": {
+    "slug": "montaje",
+    "titulo": "Montaje de turbinas y equipos auxiliares",
+    "subtitulo": "Instalación mecánica completa desde la recepción del equipo en sitio hasta la entrega lista para puesta en marcha.",
+    "queIncluye": [
+      "Recepción y verificación en sitio",
+      "Premontaje y montaje del rotor, estator y carcasa",
+      "Acople a generador y alineación",
+      "Montaje de sistemas auxiliares (aceite de lubricación, refrigeración, control)",
+      "Pruebas mecánicas previas a comisionamiento",
+      "Documentación de obra y dossier técnico"
+    ],
+    "cierreTexto": "Garantice un montaje conforme a estándares del fabricante. Consulte por su próximo proyecto."
+  },
+  "puesta-en-marcha": {
+    "slug": "puesta-en-marcha",
+    "titulo": "Puesta en marcha y comisionamiento",
+    "subtitulo": "Transformamos un equipo instalado en una unidad de generación operativa, confiable y entregada formalmente al cliente.",
+    "queIncluye": [
+      "Pruebas en frío y en caliente",
+      "Sincronización con red",
+      "Pruebas de aceptación de funcionamiento (performance tests)",
+      "Curvas de operación y registros de comisionamiento",
+      "Capacitación al personal de operación del cliente",
+      "Entrega formal con dossier completo"
+    ],
+    "cierreTexto": "Pase de la obra a la operación con seguridad técnica y respaldo documental."
+  },
+  "alineacion": {
+    "slug": "alineacion",
+    "titulo": "Alineación de precisión",
+    "subtitulo": "Alineación láser entre turbina, reductor y generador para eliminar vibraciones, reducir desgaste y proteger su inversión.",
+    "queIncluye": [
+      "Alineación láser de alta precisión",
+      "Corrección de desalineaciones angulares y paralelas",
+      "Verificación de soft foot y planitud de base",
+      "Reportes con valores antes/después",
+      "Recomendaciones para próximos chequeos"
+    ],
+    "cierreTexto": "Una buena alineación puede ahorrar años de vida útil. Pida un servicio puntual o programado."
+  },
+  "asesoria": {
+    "slug": "asesoria",
+    "titulo": "Asesoría técnica especializada",
+    "subtitulo": "Consultoría independiente para apoyar las decisiones técnicas más importantes de su planta.",
+    "queIncluye": [
+      "Diagnóstico de problemas operativos recurrentes",
+      "Diseño de planes de mantenimiento",
+      "Estudios de modernización y repotenciación",
+      "Segunda opinión técnica frente a propuestas de terceros",
+      "Acompañamiento en negociaciones técnicas con fabricantes"
+    ],
+    "cierreTexto": "Decisiones técnicas mejor informadas. Hablemos."
+  },
+  "suministros": {
+    "slug": "suministros",
+    "titulo": "Suministros y repuestos",
+    "subtitulo": "Gestión de repuestos originales y alternativos, además de herramientas especializadas para intervenciones de turbinas.",
+    "queIncluye": [
+      "Repuestos originales de fabricante",
+      "Repuestos alternativos certificados",
+      "Herramientas especializadas (gatos hidráulicos, alineadores, instrumentación)",
+      "Soporte logístico internacional",
+      "Asesoría de obsolescencia y reemplazo"
+    ],
+    "cierreTexto": "Reduzca tiempos de parada con la cadena de suministro correcta."
+  }
+}

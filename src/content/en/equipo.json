@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "breadcrumbHome": "Home"
+  },
+  "hero": {
+    "eyebrow": "The team",
+    "title": "Decades of experience. One single firm.",
+    "subtitle": "NRG was founded in 2025 as a company, but the people who form it have spent their entire professional careers intervening turbines around the world. That is the only track record that matters when a plant is down."
+  },
+  "philosophy": {
+    "eyebrow": "Philosophy",
+    "title": "Why the team matters more than the company's age",
+    "paragraphs": [
+      "In turbine engineering, companies don't solve problems — the people who arrive on site with experience, judgment, and hands do. A firm with 30 years of history but constant staff turnover may have less useful expertise than a young company whose team are veterans who have seen hundreds of machines.",
+      "NRG is exactly that: a team whose collective experience far exceeds the age of the company that now brings them together."
+    ]
+  },
+  "members": {
+    "eyebrow": "Who we are",
+    "title": "Meet the team",
+    "subtitle": "While we finalize the public presentation of the team, we share the professional profiles that make up NRG. Names and photographs will be added shortly.",
+    "items": [
+      {
+        "id": "ingenieria-direccion",
+        "name": null,
+        "role": "Mechanical Engineer — Technical Director",
+        "shortBio": "Solid mechanical engineering background with a focus on rotating systems and plant design. Responsible for technical coordination, project engineering, and proposal development.",
+        "strengths": ["Technical analysis", "Detailed engineering", "Project management"],
+        "experienceYears": null,
+        "regions": ["Latin America"],
+        "photo": null,
+        "linkedin": null
+      },
+      {
+        "id": "supervision-senior-1",
+        "name": null,
+        "role": "Senior Field Supervisor",
+        "shortBio": "Over 15 years intervening turbines at hydroelectric, thermoelectric, and gas plants across Latin America, Europe, and Africa.",
+        "strengths": ["Mechanical assembly", "Commissioning", "Precision alignment"],
+        "experienceYears": "+15 years",
+        "regions": ["Latin America", "Europe", "Africa"],
+        "photo": null,
+        "linkedin": null
+      },
+      {
+        "id": "supervision-senior-2",
+        "name": null,
+        "role": "Senior Field Supervisor",
+        "shortBio": "Over 15 years of international experience in turbine and generator maintenance and intervention. Solid track record in large-scale plants.",
+        "strengths": ["Major maintenance", "Fault diagnosis", "Site supervision"],
+        "experienceYears": "+15 years",
+        "regions": ["Latin America", "Europe", "Africa"],
+        "photo": null,
+        "linkedin": null
+      }
+    ]
+  },
+  "credentials": {
+    "title": "What the team brings to the table",
+    "subtitle": "Metrics that reflect accumulated track records, not corporate years.",
+    "items": [
+      { "value": "+35", "unit": "years", "label": "combined field experience" },
+      { "value": "15", "unit": "countries", "label": "where the team has operated" },
+      { "value": "+50", "unit": "projects", "label": "across hydro, steam and gas plants" },
+      { "value": "3", "unit": "continents", "label": "Latin America, Europe, Africa" }
+    ]
+  },
+  "approach": {
+    "eyebrow": "How we work",
+    "title": "The judgment that only field years provide",
+    "items": [
+      {
+        "icon": "Eye",
+        "title": "Diagnosis before intervention",
+        "description": "Before proposing a service, we understand the plant. That avoids unnecessary costs and generic solutions."
+      },
+      {
+        "icon": "Users",
+        "title": "The supervisor owns the project technically",
+        "description": "The person leading the job is present from the proposal through to close-out. No internal handoffs that lose context."
+      },
+      {
+        "icon": "FileText",
+        "title": "Documentation at major-operator standards",
+        "description": "Reports, protocols, and technical dossiers that any external audit can review."
+      },
+      {
+        "icon": "Globe2",
+        "title": "International mobility without friction",
+        "description": "We are accustomed to mobilizing. We speak the sector's technical languages and understand its local regulations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want to know how this team can help your plant?",
+    "subtitle": "Schedule a no-obligation technical call. We will introduce the team and discuss your specific situation.",
+    "ctaPrimary": { "label": "Schedule a technical call", "href": "/contacto" },
+    "ctaSecondary": { "label": "View our services", "href": "/servicios" }
+  }
+}

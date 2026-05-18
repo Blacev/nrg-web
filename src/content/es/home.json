@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "eyebrow": "Servicios de ingeniería para centrales eléctricas",
+    "title": "Ingeniería en movimiento.",
+    "titleHighlight": "Experiencia en cada giro.",
+    "subtitle": "Mantenimiento, montaje y puesta en marcha de turbinas hidráulicas, de vapor y de gas. Operamos donde la energía gira — con un equipo que ha intervenido más de 50 proyectos en 15 países.",
+    "ctaPrimary": { "label": "Solicitar cotización", "href": "/contacto" },
+    "ctaSecondary": { "label": "Conoce al equipo", "href": "/equipo" },
+    "backgroundImage": "/images/hero/turbine.jpg"
+  },
+  "metrics": [
+    { "value": "+35", "unit": "años", "label": "experiencia combinada" },
+    { "value": "15",  "unit": "países", "label": "de operación" },
+    { "value": "3",   "unit": "continentes", "label": "Latam, Europa, África" },
+    { "value": "+50", "unit": "proyectos", "label": "intervenidos" }
+  ],
+  "valueProps": {
+    "title": "Lo que nos hace diferentes",
+    "subtitle": "Somos una firma joven con un equipo veterano. Esa combinación define cómo trabajamos.",
+    "items": [
+      {
+        "icon": "Award",
+        "title": "Experiencia probada en campo",
+        "description": "Nuestros supervisores acumulan más de 30 años interviniendo turbinas en plantas de tres continentes. Hemos visto suficientes centrales para saber qué funciona y qué no."
+      },
+      {
+        "icon": "Zap",
+        "title": "Agilidad sin burocracia",
+        "description": "Operamos como un equipo enfocado, sin las capas administrativas de las grandes firmas. Eso significa respuestas rápidas, decisiones técnicas directas y trato cercano."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Rigor técnico, criterio práctico",
+        "description": "Cada intervención sigue los estándares del fabricante y las normas del sector — pero las aplicamos con el criterio que solo dan los años en planta."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "Servicios integrales para centrales eléctricas",
+    "items": [
+      {
+        "icon": "Wrench",
+        "slug": "mantenimiento",
+        "title": "Mantenimiento",
+        "description": "Preventivo, correctivo y predictivo para turbinas hidráulicas, de vapor y de gas. Inspecciones, overhaul mayor y menor."
+      },
+      {
+        "icon": "Settings",
+        "slug": "montaje",
+        "title": "Montaje",
+        "description": "Instalación mecánica completa de turbinas y equipos auxiliares, desde la recepción en sitio hasta el acople final."
+      },
+      {
+        "icon": "Play",
+        "slug": "puesta-en-marcha",
+        "title": "Puesta en marcha",
+        "description": "Commissioning, pruebas de aceptación, sincronización y entrega operativa al cliente."
+      },
+      {
+        "icon": "Crosshair",
+        "slug": "alineacion",
+        "title": "Alineación",
+        "description": "Alineación láser de precisión entre turbina y generador. Reducción de vibraciones y desgaste prematuro."
+      },
+      {
+        "icon": "Lightbulb",
+        "slug": "asesoria",
+        "title": "Asesoría técnica",
+        "description": "Consultoría especializada en operación, fallas recurrentes, planes de mantenimiento y modernización."
+      },
+      {
+        "icon": "Package",
+        "slug": "suministros",
+        "title": "Suministros",
+        "description": "Repuestos originales y alternativos, herramientas especializadas y soporte logístico para intervenciones."
+      }
+    ],
+    "ctaLabel": "Ver todos los servicios",
+    "ctaHref": "/servicios"
+  },
+  "sectors": {
+    "eyebrow": "Sectores",
+    "title": "Tres tecnologías. Una misma exigencia técnica.",
+    "items": [
+      {
+        "key": "hidro",
+        "tag": "HIDROELÉCTRICA",
+        "title": "Centrales hidroeléctricas",
+        "description": "Turbinas Pelton, Francis y Kaplan. Desde minicentrales hasta plantas de gran capacidad.",
+        "image": "/images/sectores/hidro.jpg"
+      },
+      {
+        "key": "vapor",
+        "tag": "VAPOR",
+        "title": "Centrales térmicas de vapor",
+        "description": "Turbinas de vapor en plantas de biomasa, cogeneración, ingenios azucareros y termoeléctricas.",
+        "image": "/images/sectores/vapor.jpg"
+      },
+      {
+        "key": "gas",
+        "tag": "GAS",
+        "title": "Centrales térmicas de gas",
+        "description": "Turbinas de gas en ciclo simple y combinado, plantas de respaldo y generación distribuida.",
+        "image": "/images/sectores/gas.jpg"
+      }
+    ]
+  },
+  "teamPreview": {
+    "eyebrow": "El equipo",
+    "title": "El equipo es la empresa.",
+    "subtitle": "Antes de NRG, nuestros ingenieros y supervisores ya estaban interviniendo turbinas alrededor del mundo. Ahora trabajan bajo una sola firma.",
+    "highlight": "En este sector, las plantas no contratan logos: contratan a las personas que llegan a sitio. Por eso hablamos primero del equipo.",
+    "ctaLabel": "Conoce a quienes hacen el trabajo",
+    "ctaHref": "/equipo"
+  },
+  "whyUs": {
+    "eyebrow": "Por qué NRG",
+    "title": "Por qué trabajar con NRG",
+    "items": [
+      {
+        "icon": "Globe",
+        "title": "Cobertura internacional real",
+        "description": "Nuestro equipo ha trabajado en plantas de Latinoamérica, Europa y África. Movilidad internacional es parte de cómo operamos."
+      },
+      {
+        "icon": "Layers",
+        "title": "Multi-tecnología",
+        "description": "No nos especializamos en una sola marca o tipo de turbina. Trabajamos con hidráulicas, de vapor y de gas — lo que reduce su número de proveedores."
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Cercanía con la dirección",
+        "description": "Cuando contrata NRG, habla con quien toma las decisiones técnicas. Sin intermediarios comerciales."
+      },
+      {
+        "icon": "Clock",
+        "title": "Respuesta rápida en emergencias",
+        "description": "Estructura ligera = activación inmediata. En paradas no programadas, cada hora cuenta."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Documentación impecable",
+        "description": "Protocolos, reportes técnicos y entregables al nivel que exigen las grandes operadoras."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "¿Tienes una intervención en planta?",
+    "subtitle": "Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con una propuesta técnica clara.",
+    "ctaPrimary": { "label": "Solicitar cotización", "href": "/contacto" },
+    "ctaSecondary": { "label": "Hablar por WhatsApp", "href": "#whatsapp" }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "eyebrow": "Engineering services for power plants",
+    "title": "Engineering in motion.",
+    "titleHighlight": "Experience in every rotation.",
+    "subtitle": "Maintenance, assembly and commissioning of hydraulic, steam and gas turbines. We operate where energy turns — with a team that has completed more than 50 projects across 15 countries.",
+    "ctaPrimary": { "label": "Request a quote", "href": "/contacto" },
+    "ctaSecondary": { "label": "Meet the team", "href": "/equipo" },
+    "backgroundImage": "/images/hero/turbine.jpg"
+  },
+  "metrics": [
+    { "value": "35+", "unit": "years", "label": "combined experience" },
+    { "value": "15",  "unit": "countries", "label": "of operation" },
+    { "value": "3",   "unit": "continents", "label": "LatAm, Europe, Africa" },
+    { "value": "50+", "unit": "projects", "label": "completed" }
+  ],
+  "valueProps": {
+    "title": "What makes us different",
+    "subtitle": "A young firm with a veteran team. That combination defines how we work.",
+    "items": [
+      {
+        "icon": "Award",
+        "title": "Proven field experience",
+        "description": "Our supervisors have accumulated more than 30 years intervening turbines in plants across three continents. We have seen enough power plants to know what works and what doesn't."
+      },
+      {
+        "icon": "Zap",
+        "title": "Agility without bureaucracy",
+        "description": "We operate as a focused team, without the administrative layers of large firms. That means fast responses, direct technical decisions and a close working relationship."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Technical rigor, practical judgment",
+        "description": "Every intervention follows manufacturer standards and industry norms — but applied with the judgment that only years in the plant can provide."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Comprehensive services for power plants",
+    "items": [
+      {
+        "icon": "Wrench",
+        "slug": "mantenimiento",
+        "title": "Maintenance",
+        "description": "Preventive, corrective and predictive programs for hydraulic, steam and gas turbines. Inspections, major and minor overhauls."
+      },
+      {
+        "icon": "Settings",
+        "slug": "montaje",
+        "title": "Assembly",
+        "description": "Complete mechanical installation of turbines and auxiliary equipment, from on-site reception to final coupling."
+      },
+      {
+        "icon": "Play",
+        "slug": "puesta-en-marcha",
+        "title": "Commissioning",
+        "description": "Commissioning, acceptance tests, synchronization and formal handover to the client."
+      },
+      {
+        "icon": "Crosshair",
+        "slug": "alineacion",
+        "title": "Alignment",
+        "description": "Precision laser alignment between turbine and generator. Reduction of vibrations and premature wear."
+      },
+      {
+        "icon": "Lightbulb",
+        "slug": "asesoria",
+        "title": "Technical consulting",
+        "description": "Specialized consulting on operations, recurring failures, maintenance plans and modernization."
+      },
+      {
+        "icon": "Package",
+        "slug": "suministros",
+        "title": "Supplies",
+        "description": "Original and alternative spare parts, specialized tools and logistical support for interventions."
+      }
+    ],
+    "ctaLabel": "View all services",
+    "ctaHref": "/servicios"
+  },
+  "sectors": {
+    "eyebrow": "Sectors",
+    "title": "Three technologies. One standard of excellence.",
+    "items": [
+      {
+        "key": "hidro",
+        "tag": "HYDROELECTRIC",
+        "title": "Hydroelectric power plants",
+        "description": "Pelton, Francis and Kaplan turbines. From small hydro to large-scale plants.",
+        "image": "/images/sectores/hidro.jpg"
+      },
+      {
+        "key": "vapor",
+        "tag": "STEAM",
+        "title": "Steam thermal power plants",
+        "description": "Steam turbines in biomass, cogeneration, sugar mills and thermoelectric plants.",
+        "image": "/images/sectores/vapor.jpg"
+      },
+      {
+        "key": "gas",
+        "tag": "GAS",
+        "title": "Gas thermal power plants",
+        "description": "Gas turbines in simple and combined cycle, backup power and distributed generation.",
+        "image": "/images/sectores/gas.jpg"
+      }
+    ]
+  },
+  "teamPreview": {
+    "eyebrow": "The team",
+    "title": "The team is the company.",
+    "subtitle": "Before NRG, our engineers and supervisors were already intervening turbines around the world. Now they work under a single firm.",
+    "highlight": "In this sector, plants don't hire logos: they hire the people who show up on site. That's why we talk about the team first.",
+    "ctaLabel": "Meet the people who do the work",
+    "ctaHref": "/equipo"
+  },
+  "whyUs": {
+    "eyebrow": "Why NRG",
+    "title": "Why work with NRG",
+    "items": [
+      {
+        "icon": "Globe",
+        "title": "Real international coverage",
+        "description": "Our team has worked in plants across Latin America, Europe and Africa. International mobility is part of how we operate."
+      },
+      {
+        "icon": "Layers",
+        "title": "Multi-technology",
+        "description": "We don't specialize in a single brand or turbine type. We work with hydraulic, steam and gas — reducing your number of suppliers."
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Direct access to decision-makers",
+        "description": "When you hire NRG, you speak directly with the people making technical decisions. No commercial intermediaries."
+      },
+      {
+        "icon": "Clock",
+        "title": "Fast emergency response",
+        "description": "Lean structure = immediate activation. In unplanned shutdowns, every hour counts."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Impeccable documentation",
+        "description": "Protocols, technical reports and deliverables at the level major operators demand."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Have a plant intervention coming up?",
+    "subtitle": "Tell us what you need. We respond within 24 hours with a clear technical proposal.",
+    "ctaPrimary": { "label": "Request a quote", "href": "/contacto" },
+    "ctaSecondary": { "label": "Chat on WhatsApp", "href": "#whatsapp" }
+  }
+}

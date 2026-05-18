@@ -1,26 +1,156 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TEMA NRG — Tailwind v4
+   Tokens disponibles como clases utilitarias (bg-primary, text-accent, etc.)
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 @theme inline {
+  /* ── Tipografías ─────────────────────────────────────────────────────── */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* ── Tokens shadcn → CSS vars (:root) ───────────────────────────────── */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  /* ── Tokens NRG extra (no shadcn, disponibles como Tailwind utilities) ─ */
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent-hover: var(--accent-hover);
+  --color-success: var(--success);
+  --color-surface: var(--surface);
+  --color-bg-alt: var(--bg-alt);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+
+  /* ── Border radius ───────────────────────────────────────────────────── */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ═══════════════════════════════════════════════════════════════════════════
+   VALORES — Paleta NRG asignada a las variables shadcn
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* shadcn core */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #0a1f44;           /* Navy NRG */
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;         /* Slate-100 */
+  --secondary-foreground: #0a1f44;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #e89f3c;            /* Ámbar NRG */
+  --accent-foreground: #0a1f44;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0a1f44;
+  --radius: 0.5rem;
+
+  /* shadcn sidebar */
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #0a1f44;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #0a1f44;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #0a1f44;
+
+  /* NRG extended palette */
+  --primary-light: #1e3a6f;
+  --primary-dark: #050f22;
+  --accent-hover: #d08820;
+  --success: #0ea5a4;
+  --surface: #ffffff;
+  --bg-alt: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+}
+
+.dark {
+  --background: #050f22;
+  --foreground: #f8fafc;
+  --card: #0a1f44;
+  --card-foreground: #f8fafc;
+  --popover: #0a1f44;
+  --popover-foreground: #f8fafc;
+  --primary: #e89f3c;
+  --primary-foreground: #050f22;
+  --secondary: #1e3a6f;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e3a6f;
+  --muted-foreground: #94a3b8;
+  --accent: #e89f3c;
+  --accent-foreground: #050f22;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #1e3a6f;
+  --input: #1e3a6f;
+  --ring: #e89f3c;
+  --primary-light: #2a4f96;
+  --primary-dark: #020a15;
+  --accent-hover: #c47a0e;
+  --bg-alt: #0a1f44;
+  --surface: #0a1f44;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE LAYER
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-primary;
+  }
 }

@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "breadcrumbHome": "Inicio"
+  },
+  "hero": {
+    "eyebrow": "El equipo",
+    "title": "Décadas de experiencia. Una sola firma.",
+    "subtitle": "NRG nace como empresa en 2025, pero las personas que la conforman llevan toda su carrera profesional interviniendo turbinas alrededor del mundo. Esa es la única trayectoria que importa cuando la planta está parada."
+  },
+  "philosophy": {
+    "eyebrow": "Filosofía",
+    "title": "Por qué el equipo importa más que la antigüedad de la empresa",
+    "paragraphs": [
+      "En la ingeniería de turbinas, las empresas no resuelven problemas: lo hacen las personas que llegan a sitio con experiencia, criterio y manos. Una firma con 30 años de antigüedad pero rotación constante de personal puede tener menos experiencia útil que un equipo joven como empresa, pero con veteranos que han visto cientos de máquinas.",
+      "NRG es eso: un equipo cuya experiencia colectiva supera con creces la edad de la empresa que ahora los reúne."
+    ]
+  },
+  "members": {
+    "eyebrow": "Quiénes somos",
+    "title": "Conozca al equipo",
+    "subtitle": "Mientras finalizamos la presentación pública del equipo, compartimos los perfiles profesionales que componen NRG. Los nombres y fotografías se incorporarán próximamente.",
+    "items": [
+      {
+        "id": "ingenieria-direccion",
+        "name": null,
+        "role": "Ingeniero Mecánico — Dirección técnica",
+        "shortBio": "Formación sólida en ingeniería mecánica con enfoque en sistemas rotativos y diseño de plantas. Responsable de la coordinación técnica, ingeniería de proyectos y desarrollo de propuestas.",
+        "strengths": ["Análisis técnico", "Ingeniería de detalle", "Gestión de proyectos"],
+        "experienceYears": null,
+        "regions": ["Latinoamérica"],
+        "photo": null,
+        "linkedin": null
+      },
+      {
+        "id": "supervision-senior-1",
+        "name": null,
+        "role": "Supervisor de campo senior",
+        "shortBio": "Más de 15 años interviniendo turbinas en plantas hidroeléctricas, termoeléctricas y de gas en Latinoamérica, Europa y África.",
+        "strengths": ["Montaje mecánico", "Puesta en marcha", "Alineación de precisión"],
+        "experienceYears": "+15 años",
+        "regions": ["Latinoamérica", "Europa", "África"],
+        "photo": null,
+        "linkedin": null
+      },
+      {
+        "id": "supervision-senior-2",
+        "name": null,
+        "role": "Supervisor de campo senior",
+        "shortBio": "Más de 15 años de experiencia internacional en mantenimiento e intervención de turbinas y generadores. Trayectoria sólida en plantas de gran escala.",
+        "strengths": ["Mantenimiento mayor", "Diagnóstico de fallas", "Supervisión de obra"],
+        "experienceYears": "+15 años",
+        "regions": ["Latinoamérica", "Europa", "África"],
+        "photo": null,
+        "linkedin": null
+      }
+    ]
+  },
+  "credentials": {
+    "title": "Lo que el equipo trae a la mesa",
+    "subtitle": "Métricas que reflejan trayectorias acumuladas, no años corporativos.",
+    "items": [
+      { "value": "+35", "unit": "años", "label": "experiencia combinada en campo" },
+      { "value": "15", "unit": "países", "label": "donde el equipo ha operado" },
+      { "value": "+50", "unit": "proyectos", "label": "entre centrales hidro, vapor y gas" },
+      { "value": "3", "unit": "continentes", "label": "Latam, Europa, África" }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Cómo trabajamos",
+    "title": "El criterio que solo dan los años en planta",
+    "items": [
+      {
+        "icon": "Eye",
+        "title": "Diagnóstico antes que intervención",
+        "description": "Antes de proponer un servicio, entendemos la planta. Eso evita gastos innecesarios y soluciones genéricas."
+      },
+      {
+        "icon": "Users",
+        "title": "El supervisor es el dueño técnico del proyecto",
+        "description": "Quien dirige la obra está presente desde la propuesta hasta el cierre. Sin transferencias internas que pierdan contexto."
+      },
+      {
+        "icon": "FileText",
+        "title": "Documentación al nivel de las grandes operadoras",
+        "description": "Reportes, protocolos y dossiers técnicos que cualquier auditoría externa puede revisar."
+      },
+      {
+        "icon": "Globe2",
+        "title": "Movilidad internacional sin fricciones",
+        "description": "Estamos acostumbrados a movilizarnos. Hablamos los idiomas técnicos del sector y entendemos sus normativas locales."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Quiere conocer cómo este equipo puede ayudar a su planta?",
+    "subtitle": "Agende una llamada técnica sin compromiso. Le presentamos el equipo y discutimos su caso concreto.",
+    "ctaPrimary": { "label": "Agendar una llamada técnica", "href": "/contacto" },
+    "ctaSecondary": { "label": "Ver nuestros servicios", "href": "/servicios" }
+  }
+}

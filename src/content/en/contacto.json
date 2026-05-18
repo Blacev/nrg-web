@@ -1,0 +1,102 @@
+{
+  "nav": { "breadcrumbHome": "Home" },
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Let's discuss your next project.",
+    "subtitle": "Tell us what your plant needs. We will respond within 24 business hours with a clear technical proposal."
+  },
+  "form": {
+    "title": "Request a proposal or technical inquiry",
+    "subtitle": "Fill in the form. Fields marked with an asterisk are required.",
+    "fields": {
+      "fullName":    { "label": "Full name",              "placeholder": "Your name",                    "required": true  },
+      "company":     { "label": "Company",                "placeholder": "Your company name",            "required": true  },
+      "position":    { "label": "Job title",              "placeholder": "Your role",                    "required": false },
+      "email":       { "label": "Corporate email",        "placeholder": "name@company.com",             "required": true  },
+      "phone":       { "label": "Phone / WhatsApp",       "placeholder": "+1 555 000 0000",              "required": false },
+      "country":     { "label": "Country",                "placeholder": "Select your country",          "required": true  },
+      "serviceType": {
+        "label": "Type of service required",
+        "placeholder": "Select a service",
+        "required": true,
+        "options": [
+          { "value": "mantenimiento",    "label": "Maintenance" },
+          { "value": "montaje",          "label": "Assembly & installation" },
+          { "value": "puesta-en-marcha", "label": "Commissioning" },
+          { "value": "alineacion",       "label": "Precision alignment" },
+          { "value": "asesoria",         "label": "Technical consulting" },
+          { "value": "suministros",      "label": "Parts & supplies" },
+          { "value": "integral",         "label": "Integrated proposal (multiple services)" },
+          { "value": "otro",             "label": "Other / Not sure yet" }
+        ]
+      },
+      "plantType": {
+        "label": "Type of plant",
+        "placeholder": "Select a type",
+        "required": true,
+        "options": [
+          { "value": "hidro",  "label": "Hydroelectric" },
+          { "value": "vapor",  "label": "Steam thermal" },
+          { "value": "gas",    "label": "Gas thermal" },
+          { "value": "mixta",  "label": "Mixed" },
+          { "value": "otra",   "label": "Other" }
+        ]
+      },
+      "message": {
+        "label": "Project description or requirements",
+        "placeholder": "Tell us about the equipment, the type of intervention required, timelines, location, etc. The more context you provide, the better we can tailor our proposal.",
+        "required": true
+      }
+    },
+    "submitLabel":     "Send request",
+    "submittingLabel": "Sending…",
+    "successTitle":    "Request received",
+    "successMessage":  "Thank you for reaching out. Our technical team will review your message and respond within 24 business hours.",
+    "resetLabel":      "Send another inquiry",
+    "errorTitle":      "Something went wrong",
+    "errorMessage":    "Please try again or write to us directly at {email}.",
+    "validation": {
+      "required":   "This field is required",
+      "email":      "Please enter a valid email address",
+      "minMessage": "Please briefly describe your needs (minimum 20 characters)"
+    }
+  },
+  "sidebar": {
+    "title": "Direct contact",
+    "items": [
+      { "icon": "Mail",          "label": "Email",           "value": "contacto@nrg-ingenieria.com",        "href": "mailto:contacto@nrg-ingenieria.com" },
+      { "icon": "Phone",         "label": "Phone",           "value": "+57 (pending)",                       "href": null },
+      { "icon": "MessageCircle", "label": "WhatsApp",        "value": "Direct conversation",                "href": "https://wa.me/" },
+      { "icon": "Clock",         "label": "Office hours",    "value": "Mon–Fri · 8:00 AM – 6:00 PM GMT-5", "href": null },
+      { "icon": "MapPin",        "label": "Headquarters",    "value": "Colombia · International operations","href": null }
+    ],
+    "emergencyTitle": "Plant emergencies",
+    "emergencyText":  "For unplanned shutdowns outside office hours, contact us via WhatsApp. Our team deploys internationally."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Before reaching out",
+    "items": [
+      {
+        "question": "How quickly do you respond to an inquiry?",
+        "answer": "Within 24 business hours. Inquiries that include complete technical information receive a proposal faster."
+      },
+      {
+        "question": "Do you operate outside Latin America?",
+        "answer": "Yes. Our team has active experience in Europe and Africa and deploys internationally. The most efficient first step is to coordinate an initial technical call."
+      },
+      {
+        "question": "Do you handle plant emergencies?",
+        "answer": "Yes. For unplanned shutdowns, we recommend reaching out directly via WhatsApp, where we also respond outside office hours."
+      },
+      {
+        "question": "Do you work with specific brands?",
+        "answer": "We work with multiple OEMs and models. After a brief technical consultation we can confirm whether your equipment falls within our direct experience."
+      },
+      {
+        "question": "Do you conduct site visits before submitting a proposal?",
+        "answer": "For complex projects, yes. We coordinate a technical diagnostic visit before presenting a formal proposal."
+      }
+    ]
+  }
+}

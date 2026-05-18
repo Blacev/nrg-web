@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "breadcrumbHome": "Inicio"
+  },
+  "hero": {
+    "eyebrow": "Sectores",
+    "title": "Tres tecnologías. Una misma exigencia técnica.",
+    "subtitle": "Trabajamos con las tres principales tecnologías de generación basadas en turbinas. Esa amplitud técnica le da a su empresa un solo proveedor para múltiples necesidades."
+  },
+  "intro": {
+    "title": "Un proveedor, múltiples tecnologías",
+    "paragraphs": [
+      "La mayoría de empresas de servicios de turbinas se especializan en una sola tecnología — hidráulica, vapor o gas. Eso obliga a las plantas con generación mixta a contratar y coordinar múltiples proveedores, multiplicando interlocutores, contratos y riesgos.",
+      "NRG cubre las tres tecnologías con el mismo equipo técnico. Para usted significa menos proveedores, mejor coordinación y consistencia de calidad entre intervenciones."
+    ]
+  },
+  "sectors": [
+    {
+      "id": "hidro",
+      "tag": "HIDROELÉCTRICA",
+      "icon": "Droplets",
+      "title": "Centrales hidroeléctricas",
+      "shortDescription": "Turbinas Pelton, Francis y Kaplan. Desde minicentrales hasta plantas de gran capacidad.",
+      "fullDescription": "Intervenimos turbinas hidráulicas en centrales de baja, media y alta caída. Nuestro equipo ha trabajado tanto en minicentrales (PCH) como en plantas de gran capacidad, en proyectos públicos y privados, en climas tropicales, andinos y europeos.",
+      "turbineTypes": [
+        { "name": "Pelton", "description": "Altas caídas, bajo caudal. Diseño tipo cuchara con inyectores." },
+        { "name": "Francis", "description": "Caídas medias, caudales medios. Las más comunes mundialmente." },
+        { "name": "Kaplan", "description": "Bajas caídas, altos caudales. Álabes ajustables tipo hélice." },
+        { "name": "Bulbo", "description": "Para muy bajas caídas. Generador integrado en el bulbo sumergido." }
+      ],
+      "applications": [
+        "Centrales de pasada y de embalse",
+        "Minicentrales hidroeléctricas (PCH)",
+        "Plantas reversibles (pumped-storage)",
+        "Repotenciación de plantas existentes"
+      ],
+      "image": null,
+      "accentColor": "amber"
+    },
+    {
+      "id": "vapor",
+      "tag": "VAPOR",
+      "icon": "Cloud",
+      "title": "Centrales térmicas de vapor",
+      "shortDescription": "Turbinas de vapor en plantas de biomasa, cogeneración, ingenios azucareros y termoeléctricas.",
+      "fullDescription": "Servicios sobre turbinas de vapor en una amplia gama de aplicaciones industriales: cogeneración, biomasa, ingenios azucareros, refinerías, plantas papeleras y termoeléctricas de gran escala. Manejamos turbinas de acción y reacción, de condensación y contrapresión.",
+      "turbineTypes": [
+        { "name": "Acción", "description": "Toda la expansión del vapor ocurre en las toberas fijas." },
+        { "name": "Reacción", "description": "Expansión del vapor distribuida entre álabes fijos y móviles." },
+        { "name": "Condensación", "description": "El vapor de salida se condensa para máximo aprovechamiento." },
+        { "name": "Contrapresión", "description": "El vapor de salida se usa en procesos industriales (cogeneración)." }
+      ],
+      "applications": [
+        "Plantas termoeléctricas",
+        "Cogeneración industrial",
+        "Ingenios azucareros y biomasa",
+        "Refinerías y plantas químicas",
+        "Plantas papeleras"
+      ],
+      "image": null,
+      "accentColor": "teal"
+    },
+    {
+      "id": "gas",
+      "tag": "GAS",
+      "icon": "Flame",
+      "title": "Centrales térmicas de gas",
+      "shortDescription": "Turbinas de gas en ciclo simple y combinado, plantas de respaldo y generación distribuida.",
+      "fullDescription": "Atendemos turbinas de gas industriales y aeroderivadas, en aplicaciones de ciclo simple y combinado. Incluye plantas de respaldo (peaking), cogeneración industrial y generación distribuida. Trabajo coordinado con OEMs y plantas de oil & gas.",
+      "turbineTypes": [
+        { "name": "Industriales", "description": "Heavy-duty, diseño robusto para operación continua." },
+        { "name": "Aeroderivadas", "description": "Derivadas de motores de aviación, alta eficiencia y arranque rápido." },
+        { "name": "Ciclo simple", "description": "Solo turbina de gas. Ideal para peaking y respaldo." },
+        { "name": "Ciclo combinado", "description": "Turbina de gas + turbina de vapor. Máxima eficiencia." }
+      ],
+      "applications": [
+        "Plantas de generación de respaldo (peaking)",
+        "Cogeneración industrial",
+        "Plantas de ciclo combinado",
+        "Generación distribuida",
+        "Oil & gas y refinerías"
+      ],
+      "image": null,
+      "accentColor": "amber"
+    }
+  ],
+  "crossover": {
+    "eyebrow": "Ventaja multidisciplinar",
+    "title": "Lo que ganan las plantas con generación mixta",
+    "items": [
+      {
+        "icon": "Users",
+        "title": "Un solo interlocutor técnico",
+        "description": "Reduce la fricción administrativa de coordinar proveedores especializados separadamente."
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Consistencia entre intervenciones",
+        "description": "Los mismos protocolos, estándares de calidad y formatos de reporte para todas sus unidades, independientemente de la tecnología."
+      },
+      {
+        "icon": "Wallet",
+        "title": "Economías de escala en contratación",
+        "description": "Contratos marco multi-tecnología que reducen costos de transacción y aseguran disponibilidad."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Tiene una planta con tecnología mixta?",
+    "subtitle": "Cuéntenos qué unidades opera. Le proponemos un esquema de servicios integral con un solo equipo técnico.",
+    "ctaPrimary": { "label": "Solicitar propuesta integral", "href": "/contacto" },
+    "ctaSecondary": { "label": "Ver nuestros servicios", "href": "/servicios" }
+  },
+  "labels": {
+    "turbineTypesLabel": "Tipos de turbina",
+    "applicationsLabel": "Aplicaciones"
+  }
+}
