@@ -77,7 +77,8 @@
       }
     ],
     "ctaLabel": "Ver todos los servicios",
-    "ctaHref": "/servicios"
+    "ctaHref": "/servicios",
+    "viewDetailLabel": "Más información"
   },
   "sectors": {
     "eyebrow": "Sectores",

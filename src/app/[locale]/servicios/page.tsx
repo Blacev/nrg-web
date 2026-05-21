@@ -34,9 +34,15 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export const metadata: Metadata = {
-  title: 'Servicios',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const { page } = await getServiciosContent(locale as 'es' | 'en');
+  return {
+    title: page.title,
+    description: page.subtitle,
+    openGraph: { title: page.title, description: page.subtitle },
+  };
+}
 
 export default async function ServiciosPage({ params }: Props) {
   const { locale } = await params;
@@ -119,7 +125,7 @@ export default async function ServiciosPage({ params }: Props) {
                         className="relative z-10 mt-1 flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors duration-200 group-hover:text-accent"
                         aria-hidden="true"
                       >
-                        Ver detalle del servicio
+                        {page.otherServicesViewLabel}
                         <ArrowRight className="size-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                       </div>
                     </div>

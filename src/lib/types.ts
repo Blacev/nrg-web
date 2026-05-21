@@ -183,6 +183,7 @@ export type HomeContent = {
     items: HomeServiceItem[];
     ctaLabel: string;
     ctaHref: string;
+    viewDetailLabel: string;
   };
   sectors: {
     eyebrow: string;

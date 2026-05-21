@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import {
   Wrench, Settings, Play, Crosshair, Lightbulb, Package,
-  Check, ChevronRight, TrendingUp, ArrowRight,
+  Check, ChevronRight, TrendingUp, Award, Target, Shield, Zap, CheckCircle2, ArrowRight,
   type LucideIcon,
 } from 'lucide-react';
 import { Link } from '@/lib/navigation';
@@ -18,6 +18,8 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection';
 const iconMap: Record<string, LucideIcon> = {
   Wrench, Settings, Play, Crosshair, Lightbulb, Package,
 };
+
+const BENEFIT_ICONS: LucideIcon[] = [TrendingUp, Award, Target, Shield, Zap, CheckCircle2];
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -201,16 +203,19 @@ export default async function ServicioPage({ params }: Props) {
             </Heading>
           </AnimatedSection>
           <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2">
-            {servicio.benefits.items.map((item, i) => (
+            {servicio.benefits.items.map((item, i) => {
+              const BenefitIcon = BENEFIT_ICONS[i % BENEFIT_ICONS.length];
+              return (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="flex gap-4 rounded-xl bg-primary/50 p-6">
                   <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent/15">
-                    <TrendingUp className="size-5 text-accent" aria-hidden="true" />
+                    <BenefitIcon className="size-5 text-accent" aria-hidden="true" />
                   </div>
                   <span className="text-sm leading-relaxed text-text-light/85">{item}</span>
                 </div>
               </AnimatedSection>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>
@@ -255,7 +260,7 @@ export default async function ServicioPage({ params }: Props) {
               return (
                 <AnimatedSection key={s.slug} delay={i * 0.08}>
                   <Link
-                    href={`/servicios/${s.slug}`}
+                    href={{ pathname: '/servicios/[slug]' as const, params: { slug: s.slug } }}
                     className="group flex flex-col gap-3 rounded-xl border border-border bg-surface p-5 transition-all duration-200 hover:border-primary/25 hover:shadow-sm"
                   >
                     <div className="flex size-9 items-center justify-center rounded-lg bg-primary/8">

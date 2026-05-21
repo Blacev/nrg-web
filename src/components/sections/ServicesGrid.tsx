@@ -57,7 +57,7 @@ export function ServicesGrid({ services }: Props) {
                     </p>
                   </div>
                   <span className="flex items-center gap-1 text-sm font-semibold text-primary transition-gap duration-200 group-hover:gap-2">
-                    Más información
+                    {services.viewDetailLabel}
                     <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
                   </span>
                 </Link>

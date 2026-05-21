@@ -14,13 +14,22 @@ export async function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  title: 'NRG — Ingeniería en movimiento',
-};
-
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const content = await getHomeContent(locale as 'es' | 'en');
+  const title = locale === 'en'
+    ? 'NRG — Engineering in motion'
+    : 'NRG — Ingeniería en movimiento';
+  return {
+    title,
+    description: content.hero.subtitle,
+    openGraph: { title, description: content.hero.subtitle },
+  };
+}
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;

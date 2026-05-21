@@ -5,7 +5,7 @@ import {
   Users, GitBranch, Wallet,
   type LucideIcon,
 } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { routing } from '@/i18n/routing';
 import { getSectoresContent } from '@/lib/content';
 import { cn } from '@/lib/utils';
@@ -342,13 +342,13 @@ export default async function SectoresPage({ params }: Props) {
             </AnimatedSection>
             <AnimatedSection delay={0.3} className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
-                href={cta.ctaPrimary.href}
+                href={asHref(cta.ctaPrimary.href)}
                 className={buttonVariants({ variant: 'primary', size: 'lg' })}
               >
                 {cta.ctaPrimary.label}
               </Link>
               <Link
-                href={cta.ctaSecondary.href}
+                href={asHref(cta.ctaSecondary.href)}
                 className={buttonVariants({ variant: 'secondary-navy', size: 'lg' })}
               >
                 {cta.ctaSecondary.label}

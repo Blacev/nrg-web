@@ -265,7 +265,7 @@ export default function Navbar() {
                   </span>
                   <span className="text-border" aria-hidden="true">|</span>
                   <Link
-                    href={pathname}
+                    href={switchHref}
                     locale={otherLocale}
                     className={cn('font-semibold transition-colors', locale === 'en' ? 'text-primary' : 'text-muted-foreground hover:text-primary')}
                   >
