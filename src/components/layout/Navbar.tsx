@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Link, usePathname } from '@/lib/navigation';
+import { Link, usePathname, asHref } from '@/lib/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -15,6 +15,22 @@ const NAV_LINKS = [
   { href: '/sectores', labelKey: 'sectores' },
   { href: '/contacto', labelKey: 'contacto' },
 ] as const;
+
+// Maps service slugs between locales so the language switcher stays on the correct service page
+const SERVICE_SLUG_MAP: Record<string, { es: string; en: string }> = {
+  mantenimiento:    { es: 'mantenimiento', en: 'maintenance' },
+  maintenance:      { es: 'mantenimiento', en: 'maintenance' },
+  montaje:          { es: 'montaje',       en: 'installation' },
+  installation:     { es: 'montaje',       en: 'installation' },
+  'puesta-en-marcha': { es: 'puesta-en-marcha', en: 'commissioning' },
+  commissioning:    { es: 'puesta-en-marcha', en: 'commissioning' },
+  alineacion:       { es: 'alineacion',    en: 'alignment' },
+  alignment:        { es: 'alineacion',    en: 'alignment' },
+  asesoria:         { es: 'asesoria',      en: 'consulting' },
+  consulting:       { es: 'asesoria',      en: 'consulting' },
+  suministros:      { es: 'suministros',   en: 'supplies' },
+  supplies:         { es: 'suministros',   en: 'supplies' },
+};
 
 type NavLabelKey = (typeof NAV_LINKS)[number]['labelKey'];
 
@@ -36,13 +52,26 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   const otherLocale = locale === 'es' ? 'en' : 'es';
-  const light = !scrolled;
+  const isHomePage = pathname === '/';
+  const light = isHomePage && !scrolled;
 
   function isActive(href: string) {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   }
+
+  // Build a type-safe href for the locale switcher.
+  // Service detail pages need the object form so the slug is translated.
+  const serviceSlugMatch = pathname.match(/^\/servicios\/(.+)$/);
+  const switchHref = serviceSlugMatch
+    ? ({ pathname: '/servicios/[slug]' as const, params: { slug: SERVICE_SLUG_MAP[serviceSlugMatch[1]]?.[otherLocale as 'es' | 'en'] ?? serviceSlugMatch[1] } })
+    : asHref(pathname);
 
   return (
     <header
@@ -116,7 +145,7 @@ export default function Navbar() {
                 |
               </span>
               <Link
-                href={pathname}
+                href={switchHref}
                 locale={otherLocale}
                 className={cn(
                   'transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm',
@@ -160,7 +189,7 @@ export default function Navbar() {
           <>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-primary-dark/70 lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

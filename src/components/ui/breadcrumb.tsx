@@ -1,5 +1,5 @@
 import { ChevronRight } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { cn } from '@/lib/utils';
 
 export type BreadcrumbItem = {
@@ -23,7 +23,7 @@ export function Breadcrumb({ items, className }: Props) {
             )}
             {item.href ? (
               <Link
-                href={item.href}
+                href={asHref(item.href)}
                 className="transition-colors duration-200 hover:text-primary"
               >
                 {item.label}

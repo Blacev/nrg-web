@@ -3,7 +3,7 @@ import {
   Wrench, Settings, Play, Crosshair, Lightbulb, Package, ArrowRight,
   type LucideIcon,
 } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { getServiciosContent } from '@/lib/content';
 import { Container } from '@/components/ui/container';
 import { Eyebrow } from '@/components/ui/eyebrow';
@@ -105,7 +105,7 @@ export default async function ServiciosPage({ params }: Props) {
                       <div>
                         <h2 className="font-display text-xl font-semibold text-primary">
                           <Link
-                            href={`/servicios/${service.slug}`}
+                            href={{ pathname: '/servicios/[slug]' as const, params: { slug: service.slug } }}
                             className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                           >
                             {service.title}
@@ -147,7 +147,7 @@ export default async function ServiciosPage({ params }: Props) {
             </AnimatedSection>
             <AnimatedSection delay={0.3}>
               <Link
-                href={page.ctaHref}
+                href={asHref(page.ctaHref)}
                 className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-8')}
               >
                 {page.ctaLabel}

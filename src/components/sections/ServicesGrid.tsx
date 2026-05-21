@@ -2,7 +2,7 @@ import {
   Wrench, Settings, Play, Crosshair, Lightbulb, Package, ArrowRight,
   type LucideIcon,
 } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { Container } from '@/components/ui/container';
 import { Eyebrow } from '@/components/ui/eyebrow';
 import { Heading } from '@/components/ui/heading';
@@ -38,7 +38,7 @@ export function ServicesGrid({ services }: Props) {
             return (
               <AnimatedSection key={item.slug} delay={i * 0.1}>
                 <Link
-                  href={`/servicios/${item.slug}`}
+                  href={{ pathname: '/servicios/[slug]' as const, params: { slug: item.slug } }}
                   className={cn(
                     'group flex flex-col gap-4 rounded-xl border border-border bg-surface p-7',
                     'border-b-2 border-b-transparent transition-all duration-200',
@@ -68,7 +68,7 @@ export function ServicesGrid({ services }: Props) {
 
         <AnimatedSection className="mt-12 text-center" delay={0.15}>
           <Link
-            href={services.ctaHref}
+            href={asHref(services.ctaHref)}
             className="inline-flex items-center gap-2 text-base font-semibold text-primary transition-colors duration-200 hover:text-accent"
           >
             {services.ctaLabel}

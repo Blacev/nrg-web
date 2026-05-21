@@ -1,4 +1,4 @@
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { ArrowRight } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 import { Eyebrow } from '@/components/ui/eyebrow';
@@ -30,7 +30,7 @@ export function TeamPreview({ teamPreview }: Props) {
             </p>
             <div className="mt-8">
               <Link
-                href={teamPreview.ctaHref}
+                href={asHref(teamPreview.ctaHref)}
                 className={cn(
                   buttonVariants({ variant: 'primary', size: 'lg' }),
                   'group',

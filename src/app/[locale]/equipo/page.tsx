@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Eye, Users, FileText, Globe2, type LucideIcon } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { getEquipoContent } from '@/lib/content';
 import { Container } from '@/components/ui/container';
 import { Eyebrow } from '@/components/ui/eyebrow';
@@ -148,7 +148,7 @@ export default async function EquipoPage({ params }: Props) {
             </h2>
             <p className="mt-3 text-base text-text-light/60">{credentials.subtitle}</p>
           </AnimatedSection>
-          <dl className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-6 xs:grid-cols-2 xs:gap-8 lg:grid-cols-4">
             {credentials.items.map((item, i) => (
               <AnimatedSection
                 key={i}
@@ -163,8 +163,8 @@ export default async function EquipoPage({ params }: Props) {
                   value={item.value}
                   unit={item.unit}
                   label={item.label}
-                  className="font-mono text-5xl font-medium text-accent sm:text-6xl"
-                  unitClassName="ml-1 text-3xl sm:text-4xl"
+                  className="font-mono text-4xl xs:text-5xl font-medium text-accent lg:text-6xl"
+                  unitClassName="ml-1 text-2xl xs:text-3xl lg:text-4xl"
                 />
               </AnimatedSection>
             ))}
@@ -232,13 +232,13 @@ export default async function EquipoPage({ params }: Props) {
             </AnimatedSection>
             <AnimatedSection delay={0.3} className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
-                href={cta.ctaPrimary.href}
+                href={asHref(cta.ctaPrimary.href)}
                 className={buttonVariants({ variant: 'primary', size: 'lg' })}
               >
                 {cta.ctaPrimary.label}
               </Link>
               <Link
-                href={cta.ctaSecondary.href}
+                href={asHref(cta.ctaSecondary.href)}
                 className={buttonVariants({ variant: 'inverted', size: 'lg' })}
               >
                 {cta.ctaSecondary.label}

@@ -18,7 +18,7 @@
   },
   "services": [
     {
-      "slug": "mantenimiento",
+      "slug": "maintenance",
       "icon": "Wrench",
       "title": "Turbine maintenance",
       "shortDescription": "Preventive, corrective and predictive programs for hydraulic, steam and gas turbines. Inspections, major and minor overhauls.",
@@ -56,7 +56,7 @@
       "image": "/images/servicios/mantenimiento.jpg"
     },
     {
-      "slug": "montaje",
+      "slug": "installation",
       "icon": "Settings",
       "title": "Turbine assembly",
       "shortDescription": "Complete mechanical installation of turbines and auxiliary equipment, from on-site reception to final coupling.",
@@ -95,7 +95,7 @@
       "image": "/images/servicios/montaje.jpg"
     },
     {
-      "slug": "puesta-en-marcha",
+      "slug": "commissioning",
       "icon": "Play",
       "title": "Commissioning",
       "shortDescription": "Commissioning, acceptance tests, synchronization and operational handover to the client.",
@@ -134,7 +134,7 @@
       "image": "/images/servicios/puesta-en-marcha.jpg"
     },
     {
-      "slug": "alineacion",
+      "slug": "alignment",
       "icon": "Crosshair",
       "title": "Precision alignment",
       "shortDescription": "Precision laser alignment between turbine and generator. Reduction of vibrations and premature wear.",
@@ -172,7 +172,7 @@
       "image": "/images/servicios/alineacion.jpg"
     },
     {
-      "slug": "asesoria",
+      "slug": "consulting",
       "icon": "Lightbulb",
       "title": "Technical consulting",
       "shortDescription": "Specialized consulting on operations, recurring failures, maintenance plans and modernization.",
@@ -210,7 +210,7 @@
       "image": "/images/servicios/asesoria.jpg"
     },
     {
-      "slug": "suministros",
+      "slug": "supplies",
       "icon": "Package",
       "title": "Supplies and spare parts",
       "shortDescription": "Original and alternative spare parts, specialized tools and logistical support for interventions.",

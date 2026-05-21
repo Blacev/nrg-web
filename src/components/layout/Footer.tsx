@@ -1,20 +1,9 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@/lib/navigation';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { Link, asHref } from '@/lib/navigation';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
 import { Container } from '@/components/ui/container';
-
-// Footer es Server Component — los hooks de navegación necesitan ser client
-// Por eso extraemos el switch de idioma a un sub-componente client
+import { getServiciosContent } from '@/lib/content';
 import FooterLangSwitch from './FooterLangSwitch';
-
-const SERVICIOS = [
-  { href: '/servicios/mantenimiento', label: 'Mantenimiento' },
-  { href: '/servicios/montaje', label: 'Montaje' },
-  { href: '/servicios/puesta-en-marcha', label: 'Puesta en marcha' },
-  { href: '/servicios/alineacion', label: 'Alineación' },
-  { href: '/servicios/asesoria', label: 'Asesoría técnica' },
-  { href: '/servicios/suministros', label: 'Suministros' },
-];
 
 const EMPRESA = [
   { href: '/equipo', labelKey: 'equipo' as const },
@@ -22,9 +11,11 @@ const EMPRESA = [
   { href: '/contacto', labelKey: 'contacto' as const },
 ];
 
-export default function Footer() {
-  const t = useTranslations('footer');
-  const tNav = useTranslations('nav');
+export default async function Footer() {
+  const locale = await getLocale();
+  const t = await getTranslations('footer');
+  const tNav = await getTranslations('nav');
+  const { services } = await getServiciosContent(locale as 'es' | 'en');
 
   return (
     <footer className="bg-primary-dark text-text-light">
@@ -52,7 +43,6 @@ export default function Footer() {
               className="mt-1 inline-flex items-center gap-2 text-sm text-text-light/60 transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
               aria-label="NRG en LinkedIn"
             >
-              {/* SVG LinkedIn — Lucide no lo incluye aún */}
               <svg className="size-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
@@ -66,13 +56,13 @@ export default function Footer() {
               {t('servicios')}
             </h3>
             <ul className="flex flex-col gap-3" role="list">
-              {SERVICIOS.map(({ href, label }) => (
-                <li key={href}>
+              {services.map((service) => (
+                <li key={service.slug}>
                   <Link
-                    href={href}
+                    href={{ pathname: '/servicios/[slug]' as const, params: { slug: service.slug } }}
                     className="text-sm text-text-light/70 transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent rounded-sm"
                   >
-                    {label}
+                    {service.title}
                   </Link>
                 </li>
               ))}
@@ -88,7 +78,7 @@ export default function Footer() {
               {EMPRESA.map(({ href, labelKey }) => (
                 <li key={href}>
                   <Link
-                    href={href}
+                    href={asHref(href)}
                     className="text-sm text-text-light/70 transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent rounded-sm"
                   >
                     {tNav(labelKey)}
@@ -141,13 +131,13 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <FooterLangSwitch />
             <Link
-              href="/legal/privacidad"
+              href={asHref('/legal/privacidad')}
               className="text-xs text-text-light/50 transition-colors hover:text-accent"
             >
               {t('privacidad')}
             </Link>
             <Link
-              href="/legal/terminos"
+              href={asHref('/legal/terminos')}
               className="text-xs text-text-light/50 transition-colors hover:text-accent"
             >
               {t('terminos')}

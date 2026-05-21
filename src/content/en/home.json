@@ -4,15 +4,37 @@
     "title": "Engineering in motion.",
     "titleHighlight": "Experience in every rotation.",
     "subtitle": "Maintenance, assembly and commissioning of hydraulic, steam and gas turbines. We operate where energy turns — with a team that has completed more than 50 projects across 15 countries.",
-    "ctaPrimary": { "label": "Request a quote", "href": "/contacto" },
-    "ctaSecondary": { "label": "Meet the team", "href": "/equipo" },
+    "ctaPrimary": {
+      "label": "Request a quote",
+      "href": "/contacto"
+    },
+    "ctaSecondary": {
+      "label": "Meet the team",
+      "href": "/equipo"
+    },
     "backgroundImage": "/images/hero/turbine.jpg"
   },
   "metrics": [
-    { "value": "35+", "unit": "years", "label": "combined experience" },
-    { "value": "15",  "unit": "countries", "label": "of operation" },
-    { "value": "3",   "unit": "continents", "label": "LatAm, Europe, Africa" },
-    { "value": "50+", "unit": "projects", "label": "completed" }
+    {
+      "value": "35+",
+      "unit": "years",
+      "label": "combined experience"
+    },
+    {
+      "value": "15",
+      "unit": "countries",
+      "label": "of operation"
+    },
+    {
+      "value": "3",
+      "unit": "continents",
+      "label": "LatAm, Europe, Africa"
+    },
+    {
+      "value": "50+",
+      "unit": "projects",
+      "label": "completed"
+    }
   ],
   "valueProps": {
     "title": "What makes us different",
@@ -41,37 +63,37 @@
     "items": [
       {
         "icon": "Wrench",
-        "slug": "mantenimiento",
+        "slug": "maintenance",
         "title": "Maintenance",
         "description": "Preventive, corrective and predictive programs for hydraulic, steam and gas turbines. Inspections, major and minor overhauls."
       },
       {
         "icon": "Settings",
-        "slug": "montaje",
+        "slug": "installation",
         "title": "Assembly",
         "description": "Complete mechanical installation of turbines and auxiliary equipment, from on-site reception to final coupling."
       },
       {
         "icon": "Play",
-        "slug": "puesta-en-marcha",
+        "slug": "commissioning",
         "title": "Commissioning",
         "description": "Commissioning, acceptance tests, synchronization and formal handover to the client."
       },
       {
         "icon": "Crosshair",
-        "slug": "alineacion",
+        "slug": "alignment",
         "title": "Alignment",
         "description": "Precision laser alignment between turbine and generator. Reduction of vibrations and premature wear."
       },
       {
         "icon": "Lightbulb",
-        "slug": "asesoria",
+        "slug": "consulting",
         "title": "Technical consulting",
         "description": "Specialized consulting on operations, recurring failures, maintenance plans and modernization."
       },
       {
         "icon": "Package",
-        "slug": "suministros",
+        "slug": "supplies",
         "title": "Supplies",
         "description": "Original and alternative spare parts, specialized tools and logistical support for interventions."
       }
@@ -148,7 +170,13 @@
   "ctaBanner": {
     "title": "Have a plant intervention coming up?",
     "subtitle": "Tell us what you need. We respond within 24 hours with a clear technical proposal.",
-    "ctaPrimary": { "label": "Request a quote", "href": "/contacto" },
-    "ctaSecondary": { "label": "Chat on WhatsApp", "href": "#whatsapp" }
+    "ctaPrimary": {
+      "label": "Request a quote",
+      "href": "/contacto"
+    },
+    "ctaSecondary": {
+      "label": "Chat on WhatsApp",
+      "href": "#whatsapp"
+    }
   }
 }

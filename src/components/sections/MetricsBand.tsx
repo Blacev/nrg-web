@@ -11,7 +11,7 @@ export function MetricsBand({ metrics }: Props) {
   return (
     <section className="bg-primary py-12">
       <Container>
-        <dl className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <dl className="grid grid-cols-1 gap-6 xs:grid-cols-2 xs:gap-8 lg:grid-cols-4">
           {metrics.map((metric, index) => (
             <AnimatedSection
               key={index}
@@ -26,8 +26,8 @@ export function MetricsBand({ metrics }: Props) {
                 value={metric.value}
                 unit={metric.unit}
                 label={metric.label}
-                className="font-mono text-5xl font-medium text-accent sm:text-6xl"
-                unitClassName="ml-1 text-3xl sm:text-4xl"
+                className="font-mono text-4xl xs:text-5xl font-medium text-accent lg:text-6xl"
+                unitClassName="ml-1 text-2xl xs:text-3xl lg:text-4xl"
               />
             </AnimatedSection>
           ))}

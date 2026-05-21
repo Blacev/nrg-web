@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { Link, usePathname } from '@/lib/navigation';
+import { Link, usePathname, asHref } from '@/lib/navigation';
 import { cn } from '@/lib/utils';
 
 export default function FooterLangSwitch() {
@@ -16,7 +16,7 @@ export default function FooterLangSwitch() {
       </span>
       <span className="text-text-light/20" aria-hidden="true">|</span>
       <Link
-        href={pathname}
+        href={asHref(pathname)}
         locale={otherLocale}
         className={cn(
           'transition-colors hover:text-accent',

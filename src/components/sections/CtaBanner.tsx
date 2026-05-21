@@ -1,5 +1,5 @@
 import { MessageCircle } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { Container } from '@/components/ui/container';
 import { buttonVariants } from '@/components/ui/button';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
@@ -47,13 +47,13 @@ export function CtaBanner({ ctaBanner }: Props) {
           </AnimatedSection>
           <AnimatedSection delay={0.3} className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
-              href={ctaBanner.ctaPrimary.href}
+              href={asHref(ctaBanner.ctaPrimary.href)}
               className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'w-full sm:w-auto')}
             >
               {ctaBanner.ctaPrimary.label}
             </Link>
             <Link
-              href={ctaBanner.ctaSecondary.href}
+              href={asHref(ctaBanner.ctaSecondary.href)}
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-text-light/25 px-6 py-3 text-base font-semibold text-text-light transition-colors duration-200 hover:border-text-light/50 hover:bg-text-light/8 sm:w-auto"
             >
               <MessageCircle className="size-4" aria-hidden="true" />

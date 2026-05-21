@@ -54,6 +54,9 @@
   --color-text-muted: var(--text-muted);
   --color-text-light: var(--text-light);
 
+  /* ── Extra breakpoints ───────────────────────────────────────────────── */
+  --breakpoint-xs: 30rem; /* 480px */
+
   /* ── Border radius ───────────────────────────────────────────────────── */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);

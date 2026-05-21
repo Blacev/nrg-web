@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { Link } from '@/lib/navigation';
+import { Link, asHref } from '@/lib/navigation';
 import { Container } from '@/components/ui/container';
 import { Eyebrow } from '@/components/ui/eyebrow';
 import { buttonVariants } from '@/components/ui/button';
@@ -95,13 +95,13 @@ export function HeroHome({ hero }: Props) {
             {...item(0.6)}
           >
             <Link
-              href={hero.ctaPrimary.href}
+              href={asHref(hero.ctaPrimary.href)}
               className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
             >
               {hero.ctaPrimary.label}
             </Link>
             <Link
-              href={hero.ctaSecondary.href}
+              href={asHref(hero.ctaSecondary.href)}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border-2 border-text-light/25 px-6 text-base font-semibold text-text-light transition-colors duration-200 hover:border-text-light/50 hover:bg-text-light/8"
             >
               {hero.ctaSecondary.label}
