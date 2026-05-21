@@ -6,6 +6,7 @@ import { Eyebrow } from '@/components/ui/eyebrow';
 import { Heading } from '@/components/ui/heading';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { ContactForm } from '@/components/sections/ContactForm';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { routing } from '@/i18n/routing';
 
 export async function generateStaticParams() {
@@ -74,13 +75,19 @@ export default async function ContactoPage({ params }: Props) {
         <div className="absolute left-0 top-0 h-1 w-32 bg-accent" />
         <Container className="relative">
           <div className="mx-auto max-w-3xl text-center">
-            <Eyebrow className="mb-4">{hero.eyebrow}</Eyebrow>
-            <Heading as="h1" size="1" className="text-text-light">
-              {hero.title}
-            </Heading>
-            <p className="mt-6 text-lg leading-relaxed text-text-light/70">
-              {hero.subtitle}
-            </p>
+            <AnimatedSection delay={0}>
+              <Eyebrow className="mb-4">{hero.eyebrow}</Eyebrow>
+            </AnimatedSection>
+            <AnimatedSection delay={0.15}>
+              <Heading as="h1" size="1" className="text-text-light">
+                {hero.title}
+              </Heading>
+            </AnimatedSection>
+            <AnimatedSection delay={0.3}>
+              <p className="mt-6 text-lg leading-relaxed text-text-light/70">
+                {hero.subtitle}
+              </p>
+            </AnimatedSection>
           </div>
         </Container>
       </section>
@@ -91,16 +98,16 @@ export default async function ContactoPage({ params }: Props) {
           <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
 
             {/* Form card (2/3) */}
-            <div className="lg:col-span-2">
+            <AnimatedSection className="lg:col-span-2">
               <div className="rounded-xl border border-border bg-surface p-6 shadow-sm md:p-8">
                 <h2 className="font-display text-xl font-semibold text-primary">{form.title}</h2>
                 <p className="mt-1 mb-6 text-sm text-muted-foreground">{form.subtitle}</p>
                 <ContactForm form={form} contactEmail={contactEmail} />
               </div>
-            </div>
+            </AnimatedSection>
 
             {/* Sidebar (1/3) */}
-            <div>
+            <AnimatedSection variant="slideFromRight">
               <div className="rounded-xl bg-primary p-6 lg:p-7">
                 <h2 className="mb-5 font-display text-base font-semibold text-text-light">
                   {sidebar.title}
@@ -145,7 +152,7 @@ export default async function ContactoPage({ params }: Props) {
                   </p>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
 
           </div>
         </Container>
@@ -155,27 +162,28 @@ export default async function ContactoPage({ params }: Props) {
       <section className="bg-bg-alt py-16 md:py-20">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <div className="mb-8 text-center">
+            <AnimatedSection className="mb-8 text-center">
               <Eyebrow className="mb-3">{faq.eyebrow}</Eyebrow>
               <Heading as="h2" size="3">{faq.title}</Heading>
-            </div>
+            </AnimatedSection>
             <div className="space-y-3">
               {faq.items.map((item, i) => (
-                <details
-                  key={i}
-                  className="group overflow-hidden rounded-xl border border-border bg-surface"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold text-primary transition-colors duration-150 hover:bg-bg-alt [&::-webkit-details-marker]:hidden">
-                    {item.question}
-                    <ChevronDown
-                      className="size-4 shrink-0 text-accent transition-transform duration-200 group-open:rotate-180"
-                      aria-hidden="true"
-                    />
-                  </summary>
-                  <div className="border-t border-border px-5 pb-5 pt-3 text-sm leading-relaxed text-muted-foreground">
-                    {item.answer}
-                  </div>
-                </details>
+                <AnimatedSection key={i} delay={i * 0.08}>
+                  <details
+                    className="group overflow-hidden rounded-xl border border-border bg-surface"
+                  >
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold text-primary transition-colors duration-150 hover:bg-bg-alt [&::-webkit-details-marker]:hidden">
+                      {item.question}
+                      <ChevronDown
+                        className="size-4 shrink-0 text-accent transition-transform duration-200 group-open:rotate-180"
+                        aria-hidden="true"
+                      />
+                    </summary>
+                    <div className="border-t border-border px-5 pb-5 pt-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.answer}
+                    </div>
+                  </details>
+                </AnimatedSection>
               ))}
             </div>
           </div>

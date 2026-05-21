@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/lib/navigation';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/container';
 
@@ -36,7 +37,7 @@ export default function Navbar() {
   }, [pathname]);
 
   const otherLocale = locale === 'es' ? 'en' : 'es';
-  const light = !scrolled; // navbar is over dark hero when not scrolled
+  const light = !scrolled;
 
   function isActive(href: string) {
     if (href === '/') return pathname === '/';
@@ -137,7 +138,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Botón hamburguesa — siempre muestra el icono de menú */}
+          {/* Botón hamburguesa */}
           <button
             className={cn(
               'rounded-md p-2 transition-colors hover:bg-primary/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden',
@@ -153,81 +154,106 @@ export default function Navbar() {
         </nav>
       </Container>
 
-      {/* Menú móvil — drawer de pantalla completa */}
-      {menuOpen && (
-        <div
-          id="mobile-menu"
-          className="fixed inset-0 z-50 flex flex-col bg-surface lg:hidden"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Menú de navegación"
-        >
-          {/* Cabecera del drawer con logo y botón X */}
-          <div className="flex h-16 items-center justify-between border-b border-border px-4">
-            <Link
-              href="/"
-              className="font-display text-2xl font-bold tracking-tight text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
-              aria-label="NRG — Inicio"
-            >
-              NRG
-            </Link>
-            <button
-              className="rounded-md p-2 text-primary transition-colors hover:bg-primary/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      {/* Menú móvil — drawer animado */}
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={() => setMenuOpen(false)}
-              aria-label="Cerrar menú"
-            >
-              <X className="size-5" />
-            </button>
-          </div>
+              aria-hidden="true"
+            />
 
-          {/* Links de navegación */}
-          <nav className="flex-1 overflow-y-auto px-4 py-6">
-            <ul className="flex flex-col gap-1" role="list">
-              {NAV_LINKS.map(({ href, labelKey }) => (
-                <li key={href}>
+            {/* Drawer */}
+            <motion.div
+              id="mobile-menu"
+              className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-surface shadow-xl lg:hidden"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Menú de navegación"
+            >
+              {/* Cabecera */}
+              <div className="flex h-16 items-center justify-between border-b border-border px-4">
+                <Link
+                  href="/"
+                  className="font-display text-2xl font-bold tracking-tight text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
+                  aria-label="NRG — Inicio"
+                >
+                  NRG
+                </Link>
+                <button
+                  className="rounded-md p-2 text-primary transition-colors hover:bg-primary/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Cerrar menú"
+                >
+                  <X className="size-5" />
+                </button>
+              </div>
+
+              {/* Links */}
+              <nav className="flex-1 overflow-y-auto px-4 py-6">
+                <ul className="flex flex-col gap-1" role="list">
+                  {NAV_LINKS.map(({ href, labelKey }, i) => (
+                    <motion.li
+                      key={href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05 + 0.1, duration: 0.3 }}
+                    >
+                      <Link
+                        href={href}
+                        className={cn(
+                          'flex items-center gap-3 rounded-lg px-4 py-3.5 text-xl font-semibold transition-colors duration-200',
+                          isActive(href)
+                            ? 'bg-primary/5 text-primary'
+                            : 'text-foreground hover:bg-muted hover:text-primary',
+                        )}
+                      >
+                        {t(labelKey as NavLabelKey)}
+                        {isActive(href) && (
+                          <span className="ml-auto size-2 rounded-full bg-accent" aria-hidden="true" />
+                        )}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </nav>
+
+              {/* Footer */}
+              <div className="border-t border-border px-4 py-6 flex flex-col gap-4">
+                <div className="flex items-center gap-3 text-base" aria-label="Selector de idioma">
+                  <span className={cn('font-semibold transition-colors', locale === 'es' ? 'text-primary' : 'text-muted-foreground')}>
+                    ES
+                  </span>
+                  <span className="text-border" aria-hidden="true">|</span>
                   <Link
-                    href={href}
-                    className={cn(
-                      'flex items-center gap-3 rounded-lg px-4 py-3.5 text-xl font-semibold transition-colors duration-200',
-                      isActive(href)
-                        ? 'bg-primary/5 text-primary'
-                        : 'text-foreground hover:bg-muted hover:text-primary',
-                    )}
+                    href={pathname}
+                    locale={otherLocale}
+                    className={cn('font-semibold transition-colors', locale === 'en' ? 'text-primary' : 'text-muted-foreground hover:text-primary')}
                   >
-                    {t(labelKey as NavLabelKey)}
-                    {isActive(href) && (
-                      <span className="ml-auto size-2 rounded-full bg-accent" aria-hidden="true" />
-                    )}
+                    EN
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Footer del drawer: switch idioma + CTA */}
-          <div className="border-t border-border px-4 py-6 flex flex-col gap-4">
-            <div className="flex items-center gap-3 text-base" aria-label="Selector de idioma">
-              <span className={cn('font-semibold transition-colors', locale === 'es' ? 'text-primary' : 'text-muted-foreground')}>
-                ES
-              </span>
-              <span className="text-border" aria-hidden="true">|</span>
-              <Link
-                href={pathname}
-                locale={otherLocale}
-                className={cn('font-semibold transition-colors', locale === 'en' ? 'text-primary' : 'text-muted-foreground hover:text-primary')}
-              >
-                EN
-              </Link>
-            </div>
-            <Link
-              href="/contacto"
-              className="block w-full rounded-lg bg-accent py-3.5 text-center text-base font-bold text-accent-foreground transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-            >
-              {t('cotizar')}
-            </Link>
-          </div>
-        </div>
-      )}
+                </div>
+                <Link
+                  href="/contacto"
+                  className="block w-full rounded-lg bg-accent py-3.5 text-center text-base font-bold text-accent-foreground transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                >
+                  {t('cotizar')}
+                </Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

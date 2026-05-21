@@ -7,6 +7,7 @@ import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { MotionProvider } from '@/components/providers/MotionProvider';
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -56,9 +57,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="antialiased bg-background text-foreground font-sans">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="pt-16">{children}</main>
-          <Footer />
+          <MotionProvider>
+            <Navbar />
+            <main className="pt-16">{children}</main>
+            <Footer />
+          </MotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

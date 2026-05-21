@@ -2,6 +2,7 @@ import { MessageCircle } from 'lucide-react';
 import { Link } from '@/lib/navigation';
 import { Container } from '@/components/ui/container';
 import { buttonVariants } from '@/components/ui/button';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import type { HomeContent } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
@@ -34,13 +35,17 @@ export function CtaBanner({ ctaBanner }: Props) {
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold leading-tight text-text-light sm:text-4xl lg:text-5xl">
-            {ctaBanner.title}
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-text-light/65 sm:text-lg">
-            {ctaBanner.subtitle}
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <AnimatedSection>
+            <h2 className="font-display text-3xl font-bold leading-tight text-text-light sm:text-4xl lg:text-5xl">
+              {ctaBanner.title}
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.15}>
+            <p className="mt-5 text-base leading-relaxed text-text-light/65 sm:text-lg">
+              {ctaBanner.subtitle}
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.3} className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href={ctaBanner.ctaPrimary.href}
               className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'w-full sm:w-auto')}
@@ -54,7 +59,7 @@ export function CtaBanner({ ctaBanner }: Props) {
               <MessageCircle className="size-4" aria-hidden="true" />
               {ctaBanner.ctaSecondary.label}
             </Link>
-          </div>
+          </AnimatedSection>
         </div>
       </Container>
     </section>

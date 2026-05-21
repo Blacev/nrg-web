@@ -14,6 +14,7 @@ import { Eyebrow } from '@/components/ui/eyebrow';
 import { Heading } from '@/components/ui/heading';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buttonVariants } from '@/components/ui/button';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 // ─── Icon maps ───────────────────────────────────────────────────────────────
 
@@ -93,13 +94,19 @@ export default async function SectoresPage({ params }: Props) {
         <div className="absolute left-0 top-0 h-1 w-32 bg-accent" />
         <Container className="relative">
           <div className="mx-auto max-w-3xl text-center">
-            <Eyebrow className="mb-4">{hero.eyebrow}</Eyebrow>
-            <Heading as="h1" size="1" className="text-text-light">
-              {hero.title}
-            </Heading>
-            <p className="mt-6 text-lg leading-relaxed text-text-light/70">
-              {hero.subtitle}
-            </p>
+            <AnimatedSection delay={0}>
+              <Eyebrow className="mb-4">{hero.eyebrow}</Eyebrow>
+            </AnimatedSection>
+            <AnimatedSection delay={0.15}>
+              <Heading as="h1" size="1" className="text-text-light">
+                {hero.title}
+              </Heading>
+            </AnimatedSection>
+            <AnimatedSection delay={0.3}>
+              <p className="mt-6 text-lg leading-relaxed text-text-light/70">
+                {hero.subtitle}
+              </p>
+            </AnimatedSection>
           </div>
         </Container>
       </section>
@@ -108,14 +115,18 @@ export default async function SectoresPage({ params }: Props) {
       <section className="bg-surface py-16 md:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <Heading as="h2" size="2" className="mb-8">
-              {intro.title}
-            </Heading>
+            <AnimatedSection>
+              <Heading as="h2" size="2" className="mb-8">
+                {intro.title}
+              </Heading>
+            </AnimatedSection>
             <div className="space-y-5">
               {intro.paragraphs.map((paragraph, i) => (
-                <p key={i} className="text-base leading-8 text-foreground">
-                  {paragraph}
-                </p>
+                <AnimatedSection key={i} delay={i * 0.1}>
+                  <p className="text-base leading-8 text-foreground">
+                    {paragraph}
+                  </p>
+                </AnimatedSection>
               ))}
             </div>
           </div>
@@ -128,6 +139,8 @@ export default async function SectoresPage({ params }: Props) {
         const isReversed = i % 2 !== 0;
         const sectionBg = i % 2 === 0 ? 'bg-bg-alt' : 'bg-surface';
         const isAmber = sector.accentColor !== 'teal';
+        const contentVariant = isReversed ? 'slideFromRight' : 'slideFromLeft';
+        const imageVariant = isReversed ? 'slideFromLeft' : 'slideFromRight';
 
         return (
           <section
@@ -138,8 +151,10 @@ export default async function SectoresPage({ params }: Props) {
               <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
                 {/* ── Content side ─────────────────────────────────────── */}
-                <div className={cn(isReversed && 'lg:order-2')}>
-
+                <AnimatedSection
+                  variant={contentVariant}
+                  className={cn(isReversed && 'lg:order-2')}
+                >
                   {/* Icon + tag */}
                   <div className="mb-5 flex items-center gap-3">
                     <div className={cn(
@@ -206,10 +221,13 @@ export default async function SectoresPage({ params }: Props) {
                       ))}
                     </ul>
                   </div>
-                </div>
+                </AnimatedSection>
 
                 {/* ── Image / placeholder side ─────────────────────────── */}
-                <div className={cn('relative', isReversed && 'lg:order-1')}>
+                <AnimatedSection
+                  variant={imageVariant}
+                  className={cn('relative', isReversed && 'lg:order-1')}
+                >
                   {sector.image ? (
                     <div className="relative min-h-[420px] overflow-hidden rounded-2xl">
                       <Image
@@ -265,7 +283,7 @@ export default async function SectoresPage({ params }: Props) {
                       )} />
                     </div>
                   )}
-                </div>
+                </AnimatedSection>
 
               </div>
             </Container>
@@ -276,32 +294,31 @@ export default async function SectoresPage({ params }: Props) {
       {/* ── Crossover (navy) ─────────────────────────────────────────────── */}
       <section className="bg-primary py-16 md:py-24">
         <Container>
-          <div className="mb-12 text-center">
+          <AnimatedSection className="mb-12 text-center">
             <Eyebrow className="mb-3">{crossover.eyebrow}</Eyebrow>
             <Heading as="h2" size="2" className="text-text-light">
               {crossover.title}
             </Heading>
-          </div>
+          </AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-3">
             {crossover.items.map((item, i) => {
               const CrossIcon = crossoverIconMap[item.icon] ?? Users;
               return (
-                <div
-                  key={i}
-                  className="flex flex-col gap-4 rounded-xl bg-primary-dark/50 p-6"
-                >
-                  <div className="flex size-12 items-center justify-center rounded-lg bg-accent/15">
-                    <CrossIcon className="size-6 text-accent" aria-hidden="true" />
+                <AnimatedSection key={i} delay={i * 0.15}>
+                  <div className="flex flex-col gap-4 rounded-xl bg-primary-dark/50 p-6">
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-accent/15">
+                      <CrossIcon className="size-6 text-accent" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-base font-semibold text-text-light">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-text-light/60">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-display text-base font-semibold text-text-light">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-text-light/60">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
+                </AnimatedSection>
               );
             })}
           </div>
@@ -312,15 +329,18 @@ export default async function SectoresPage({ params }: Props) {
       <section className="bg-surface py-20 md:py-28">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            {/* Amber accent line above */}
             <div className="mx-auto mb-8 h-1 w-16 rounded-full bg-accent" />
-            <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl lg:text-4xl">
-              {cta.title}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              {cta.subtitle}
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <AnimatedSection>
+              <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl lg:text-4xl">
+                {cta.title}
+              </h2>
+            </AnimatedSection>
+            <AnimatedSection delay={0.15}>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                {cta.subtitle}
+              </p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.3} className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
                 href={cta.ctaPrimary.href}
                 className={buttonVariants({ variant: 'primary', size: 'lg' })}
@@ -333,7 +353,7 @@ export default async function SectoresPage({ params }: Props) {
               >
                 {cta.ctaSecondary.label}
               </Link>
-            </div>
+            </AnimatedSection>
           </div>
         </Container>
       </section>

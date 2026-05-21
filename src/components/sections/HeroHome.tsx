@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { Link } from '@/lib/navigation';
 import { Container } from '@/components/ui/container';
@@ -5,10 +8,23 @@ import { Eyebrow } from '@/components/ui/eyebrow';
 import { buttonVariants } from '@/components/ui/button';
 import type { HomeContent } from '@/lib/types';
 import { cn } from '@/lib/utils';
+import { defaultTransition } from '@/lib/motion';
 
 type Props = {
   hero: HomeContent['hero'];
 };
+
+const item = (delay: number) => ({
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { ...defaultTransition, delay },
+});
+
+const fadeItem = (delay: number) => ({
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { ...defaultTransition, delay },
+});
 
 export function HeroHome({ hero }: Props) {
   return (
@@ -52,21 +68,32 @@ export function HeroHome({ hero }: Props) {
       {/* Content */}
       <Container className="relative z-10 pb-24 pt-40">
         <div className="max-w-3xl">
-          <Eyebrow variant="accent" className="mb-6">
-            {hero.eyebrow}
-          </Eyebrow>
+          <motion.div {...item(0)}>
+            <Eyebrow variant="accent" className="mb-6">
+              {hero.eyebrow}
+            </Eyebrow>
+          </motion.div>
 
           <h1 className="font-display text-4xl font-bold leading-tight text-text-light sm:text-5xl lg:text-6xl xl:text-7xl">
-            <span>{hero.title}</span>
-            {' '}
-            <span className="text-accent">{hero.titleHighlight}</span>
+            <motion.span className="block" {...item(0.15)}>
+              {hero.title}
+            </motion.span>
+            <motion.span className="block text-accent" {...item(0.3)}>
+              {hero.titleHighlight}
+            </motion.span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-light/70 sm:text-lg">
+          <motion.p
+            className="mt-6 max-w-2xl text-base leading-relaxed text-text-light/70 sm:text-lg"
+            {...item(0.45)}
+          >
             {hero.subtitle}
-          </p>
+          </motion.p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <motion.div
+            className="mt-10 flex flex-wrap gap-4"
+            {...item(0.6)}
+          >
             <Link
               href={hero.ctaPrimary.href}
               className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
@@ -79,15 +106,18 @@ export function HeroHome({ hero }: Props) {
             >
               {hero.ctaSecondary.label}
             </Link>
-          </div>
+          </motion.div>
         </div>
       </Container>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-light/40">
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-light/40"
+        {...fadeItem(1.2)}
+      >
         <span className="text-xs font-medium uppercase tracking-[0.15em]">scroll</span>
         <ChevronDown className="size-5 animate-bounce" />
-      </div>
+      </motion.div>
     </section>
   );
 }

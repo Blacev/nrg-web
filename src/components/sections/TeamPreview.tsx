@@ -4,6 +4,7 @@ import { Container } from '@/components/ui/container';
 import { Eyebrow } from '@/components/ui/eyebrow';
 import { Heading } from '@/components/ui/heading';
 import { buttonVariants } from '@/components/ui/button';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import type { HomeContent } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
@@ -17,7 +18,7 @@ export function TeamPreview({ teamPreview }: Props) {
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left: copy */}
-          <div>
+          <AnimatedSection variant="slideFromLeft">
             <Eyebrow variant="accent" className="mb-4">
               {teamPreview.eyebrow}
             </Eyebrow>
@@ -39,16 +40,18 @@ export function TeamPreview({ teamPreview }: Props) {
                 <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
               </Link>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Right: highlight blockquote */}
-          <div className="rounded-xl border-l-4 border-accent bg-accent/10 px-8 py-8">
-            <blockquote>
-              <p className="text-lg font-medium leading-relaxed text-text-light/90 sm:text-xl">
-                &ldquo;{teamPreview.highlight}&rdquo;
-              </p>
-            </blockquote>
-          </div>
+          <AnimatedSection variant="slideFromRight">
+            <div className="rounded-xl border-l-4 border-accent bg-accent/10 px-8 py-8">
+              <blockquote>
+                <p className="text-lg font-medium leading-relaxed text-text-light/90 sm:text-xl">
+                  &ldquo;{teamPreview.highlight}&rdquo;
+                </p>
+              </blockquote>
+            </div>
+          </AnimatedSection>
         </div>
       </Container>
     </section>
