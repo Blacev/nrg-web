@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { Link, asHref } from '@/lib/navigation';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
@@ -28,9 +29,13 @@ export default async function Footer() {
               className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
               aria-label="NRG — Inicio"
             >
-              <span className="font-display text-2xl font-bold tracking-tight text-text-light">
-                NRG
-              </span>
+              <Image
+                src="/images/logo/logo-color-full.png"
+                width={240}
+                height={86}
+                alt="NRG — Ingeniería en movimiento"
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-text-light/70">
               {t('tagline')}
