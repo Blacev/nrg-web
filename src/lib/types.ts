@@ -61,7 +61,7 @@ export type ServicioItem = {
   applications: ServicioItemSection;
   benefits: ServicioItemSection;
   closing: string;
-  image: string;
+  image: string | null;
 };
 
 export type ServiciosContent = {

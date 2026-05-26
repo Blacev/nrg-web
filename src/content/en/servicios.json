@@ -207,7 +207,7 @@
         ]
       },
       "closing": "Better-informed technical decisions. Let's talk.",
-      "image": "/images/servicios/asesoria.jpg"
+      "image": null
     },
     {
       "slug": "supplies",
@@ -245,7 +245,7 @@
         ]
       },
       "closing": "Reduce downtime with the right supply chain.",
-      "image": "/images/servicios/suministros.jpg"
+      "image": null
     }
   ]
 }

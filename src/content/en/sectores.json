@@ -34,7 +34,7 @@
         "Pumped-storage plants",
         "Repowering of existing plants"
       ],
-      "image": null,
+      "image": "/images/sectores/hidroelectrica.jpg",
       "accentColor": "amber"
     },
     {
@@ -57,7 +57,7 @@
         "Refineries and chemical plants",
         "Pulp and paper mills"
       ],
-      "image": null,
+      "image": "/images/sectores/vapor.jpg",
       "accentColor": "teal"
     },
     {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import {
   Wrench, Settings, Play, Crosshair, Lightbulb, Package, ArrowRight,
   type LucideIcon,
@@ -79,27 +80,43 @@ export default async function ServiciosPage({ params }: Props) {
               return (
                 <AnimatedSection key={service.slug} delay={i * 0.1}>
                   <article className="group relative overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition-shadow duration-200 hover:shadow-lg">
-                    {/* Gradient image area */}
-                    <div className={cn('relative h-44 bg-linear-to-br', gradient)}>
-                      <svg
-                        className="absolute inset-0 h-full w-full opacity-15"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <defs>
-                          <pattern
-                            id={`sp-${service.slug}`}
-                            x="0" y="0" width="28" height="28"
-                            patternUnits="userSpaceOnUse"
+                    {/* Visual area — photo or gradient placeholder */}
+                    <div className="relative h-44 overflow-hidden">
+                      {service.image ? (
+                        <>
+                          <Image
+                            src={service.image}
+                            alt={service.title}
+                            fill
+                            quality={80}
+                            sizes="(max-width: 640px) 100vw, 50vw"
+                            className="object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-primary/40" aria-hidden="true" />
+                        </>
+                      ) : (
+                        <div className={cn('absolute inset-0 bg-linear-to-br', gradient)}>
+                          <svg
+                            className="absolute inset-0 h-full w-full opacity-15"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
                           >
-                            <circle cx="1" cy="1" r="0.8" fill="white" />
-                          </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill={`url(#sp-${service.slug})`} />
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Icon className="size-20 text-white/10" aria-hidden="true" />
-                      </div>
+                            <defs>
+                              <pattern
+                                id={`sp-${service.slug}`}
+                                x="0" y="0" width="28" height="28"
+                                patternUnits="userSpaceOnUse"
+                              >
+                                <circle cx="1" cy="1" r="0.8" fill="white" />
+                              </pattern>
+                            </defs>
+                            <rect width="100%" height="100%" fill={`url(#sp-${service.slug})`} />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Icon className="size-20 text-white/10" aria-hidden="true" />
+                          </div>
+                        </div>
+                      )}
                       <div className="absolute left-0 top-0 h-1 w-20 rounded-br-sm bg-accent" />
                     </div>
 

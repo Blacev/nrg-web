@@ -207,7 +207,7 @@
         ]
       },
       "closing": "Decisiones técnicas mejor informadas. Hablemos.",
-      "image": "/images/servicios/asesoria.jpg"
+      "image": null
     },
     {
       "slug": "suministros",
@@ -245,7 +245,7 @@
         ]
       },
       "closing": "Reduzca tiempos de parada con la cadena de suministro correcta.",
-      "image": "/images/servicios/suministros.jpg"
+      "image": null
     }
   ]
 }

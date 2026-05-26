@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import {
   Wrench, Settings, Play, Crosshair, Lightbulb, Package,
@@ -116,28 +117,45 @@ export default async function ServicioPage({ params }: Props) {
               </div>
             </AnimatedSection>
 
-            {/* Right: gradient image placeholder */}
+            {/* Right: photo or gradient placeholder */}
             <AnimatedSection variant="slideFromRight">
-              <div className="relative h-72 overflow-hidden rounded-2xl bg-linear-to-br from-primary-dark via-primary to-primary-light lg:h-96">
-                <svg
-                  className="absolute inset-0 h-full w-full opacity-15"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <pattern
-                      id="sh-dots"
-                      x="0" y="0" width="28" height="28"
-                      patternUnits="userSpaceOnUse"
+              <div className="relative h-72 overflow-hidden rounded-2xl lg:h-96">
+                {servicio.image ? (
+                  <>
+                    <Image
+                      src={servicio.image}
+                      alt={servicio.heroTitle}
+                      fill
+                      quality={80}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-primary/30" aria-hidden="true" />
+                  </>
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-linear-to-br from-primary-dark via-primary to-primary-light" />
+                    <svg
+                      className="absolute inset-0 h-full w-full opacity-15"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
-                      <circle cx="1" cy="1" r="0.8" fill="white" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#sh-dots)" />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Icon className="size-36 text-white/8" aria-hidden="true" />
-                </div>
+                      <defs>
+                        <pattern
+                          id="sh-dots"
+                          x="0" y="0" width="28" height="28"
+                          patternUnits="userSpaceOnUse"
+                        >
+                          <circle cx="1" cy="1" r="0.8" fill="white" />
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#sh-dots)" />
+                    </svg>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Icon className="size-36 text-white/8" aria-hidden="true" />
+                    </div>
+                  </>
+                )}
                 <div className="absolute left-0 top-0 h-1.5 w-24 bg-accent" />
               </div>
             </AnimatedSection>

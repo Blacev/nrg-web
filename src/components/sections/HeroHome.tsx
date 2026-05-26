@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { Link, asHref } from '@/lib/navigation';
@@ -29,9 +30,34 @@ const fadeItem = (delay: number) => ({
 export function HeroHome({ hero }: Props) {
   return (
     <section className="relative -mt-16 min-h-screen overflow-hidden bg-primary-dark flex items-center">
-      {/* Background: dot-grid pattern */}
+      {/* Layer 1 — Photo (LCP candidate, must be priority) */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero/hero-turbina-pelton.jpg"
+          alt="Turbina Pelton en casa de máquinas - NRG Ingeniería en movimiento"
+          fill
+          priority
+          quality={80}
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Layer 2a — Base dark overlay: mobile 90%, desktop 85% (high opacity needed for metallic reflections) */}
+      <div
+        className="absolute inset-0 z-10 bg-primary/70 sm:bg-primary/60"
+        aria-hidden="true"
+      />
+
+      {/* Layer 2b — Directional gradient: left side denser (text area), right side thinner (image breathes) */}
+      <div
+        className="absolute inset-0 z-10 bg-linear-to-r from-primary/80 via-primary/50 to-primary/25"
+        aria-hidden="true"
+      />
+
+      {/* Layer 3 — Dot-grid texture (above overlays, preserves industrial detail feel) */}
       <svg
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 z-20 h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
@@ -47,26 +73,28 @@ export function HeroHome({ hero }: Props) {
         <rect width="100%" height="100%" fill="url(#hero-dots)" />
       </svg>
 
-      {/* Radial glow from top-center */}
+      {/* Layer 3b — Radial glow from top-center */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 z-20 pointer-events-none"
+        aria-hidden="true"
         style={{
           background:
             'radial-gradient(ellipse 90% 60% at 50% 10%, rgba(30,58,111,0.7) 0%, transparent 70%)',
         }}
       />
 
-      {/* Subtle amber accent glow — bottom left */}
+      {/* Layer 3c — Subtle amber accent glow — bottom left */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 z-20 pointer-events-none"
+        aria-hidden="true"
         style={{
           background:
             'radial-gradient(ellipse 50% 40% at 0% 100%, rgba(232,159,60,0.08) 0%, transparent 60%)',
         }}
       />
 
-      {/* Content */}
-      <Container className="relative z-10 pb-24 pt-40">
+      {/* Layer 4 — Content */}
+      <Container className="relative z-40 pb-24 pt-40">
         <div className="max-w-3xl">
           <motion.div {...item(0)}>
             <Eyebrow variant="accent" className="mb-6">
@@ -112,7 +140,7 @@ export function HeroHome({ hero }: Props) {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-light/40"
+        className="absolute bottom-8 left-1/2 z-40 -translate-x-1/2 flex flex-col items-center gap-2 text-text-light/40"
         {...fadeItem(1.2)}
       >
         <span className="text-xs font-medium uppercase tracking-[0.15em]">scroll</span>

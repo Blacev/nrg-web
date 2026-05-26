@@ -34,7 +34,7 @@
         "Plantas reversibles (pumped-storage)",
         "Repotenciación de plantas existentes"
       ],
-      "image": null,
+      "image": "/images/sectores/hidroelectrica.jpg",
       "accentColor": "amber"
     },
     {
@@ -57,7 +57,7 @@
         "Refinerías y plantas químicas",
         "Plantas papeleras"
       ],
-      "image": null,
+      "image": "/images/sectores/vapor.jpg",
       "accentColor": "teal"
     },
     {
